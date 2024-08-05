@@ -17,9 +17,17 @@
 15. Conclusion
 16. Reference Links
 
+![docker](https://github.com/user-attachments/assets/d1ed98b0-fd20-4af5-9a88-2db45d5c6911)
     
   # What is Docker?
-  Docker is a tool that is like a box for your software. It keeps everything your app needs in one place.Docker is a set of platform as a service (PaaS) products that use OS-level virtualization to deliver software in packages called containers.
+  Docker is a tool that keeps everything your app needs in one place.Docker provide platform as a service (PaaS) that use OS-level virtualization to deliver software in packages called containers.
 
   # What is Container?
-    
+  Container is like a box that provide a way of creating an isolated environment,in which applications and their dependencies can live.
+
+  # Why we use Docker?
+
+
+  # Reference Link
+- https://docs.docker.com
+- https://youtu.be/vWjP3fsfgrw?si=1v3D_vtCYSo0FbWW
