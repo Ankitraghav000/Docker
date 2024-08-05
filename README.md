@@ -3,7 +3,7 @@
 1.  What is Docker
 2.  what is container
 3.  Why we use Docker
-4.  Docker Installation on Linux
+4.  Installation
 5.  What is a Dockerfile
 6.  What are Docker Images
 7.  What is a Docker Container
@@ -26,8 +26,35 @@
   Container is like a box that provide a way of creating an isolated environment,in which applications and their dependencies can live.
 
   # Why we use Docker?
+  We use Docker for several key reasons:
+  ### Cost-saving: 
+  Docker containers use far less memory, especially when compared to their counterparts (virtual machines). Thus, you spend less on IT infrastructure resources.
+  
+  ### Isolation:
+  Docker containers are isolated from each other and from the host system, which helps prevent conflicts between applications and improves security.
+  
+### Rapid Prototyping:
+Docker allows developers to quickly create and test new features or applications without setting up complex environments.
+
+### Easy Setup: 
+Docker makes setting up applications straightforward. You don’t need to manually install and configure software; everything the app needs is in the container.
+
+# Installation
+### version
+ Ubuntu 20.04.6 LTS
+ #### How to check the version?
+ ```bash
+ lsb_release -a
+```
+### RAM 
+At least 2 GB of RAM
+#### How to check the RAM?
+ ```bash
+ free -h
+```
 
 
   # Reference Link
 - https://docs.docker.com
-- https://youtu.be/vWjP3fsfgrw?si=1v3D_vtCYSo0FbWW
+- https://sematext.com/glossary/docker/
+- 
