@@ -43,19 +43,50 @@ Docker makes setting up applications straightforward. You don’t need to manual
 ### version
  Ubuntu 20.04.6 LTS
  #### How to check the version?
- ```bash
+ ```
  lsb_release -a
 ```
 ### RAM 
 At least 2 GB of RAM
 #### How to check the RAM?
- ```bash
+ ```
  free -h
 ```
-
+#### Step 1. up-to-date system by using following command :
+```
+ sudo apt-get update
+```
+sometime curl package is not install in system, To install curl use this command: 
+```
+ sudo apt-get install curl
+```
+#### Step 2. Install the dependency packages required to install Docker.
+```
+sudo apt install apt-transport-https ca-certificates curl software-properties-common
+```
+#### Step 3.Install Docker
+```
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+```
+Next, add the Docker APT repository to your system in the sources.list.d directory.
+```
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+```
+update the local package index once more.
+```
+sudo apt update
+```
+Now, install Docker Community Edition 
+```
+sudo apt install docker-ce -y
+```
+Once installed, the Docker daemon or service should be running. To confirm this, run the command:
+```
+sudo systemctl status docker
+```
 
 
   # Reference Link
 - https://docs.docker.com
 - https://sematext.com/glossary/docker/
-- 
+- https://www.cherryservers.com/blog/install-docker-ubuntu-22-04
