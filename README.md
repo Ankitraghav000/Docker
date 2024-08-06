@@ -4,18 +4,19 @@
 2.  what is container
 3.  Why we use Docker
 4.  Installation
-5.  What is a Dockerfile
-6.  What are Docker Images
-7.  What is a Docker Container
-8.  Flow of Docker
-9.  Docker Daemon
-10.  Docker Client
-11. Docker Host
-12. Docker Hub/Registry
-13. Architecture of Docker
-14. Basic Docker Commands
-15. Conclusion
-16. Reference Links
+5.  Apache server
+6.  
+7.  What are Docker Images
+8.  What is a Docker Container
+9.  Flow of Docker
+10.  Docker Daemon
+11.  Docker Client
+12. Docker Host
+13. Docker Hub/Registry
+14. Architecture of Docker
+15. Basic Docker Commands
+16. Conclusion
+17. Reference Links
 
 ![docker](https://github.com/user-attachments/assets/d1ed98b0-fd20-4af5-9a88-2db45d5c6911)
     
@@ -85,8 +86,105 @@ Once installed, the Docker daemon or service should be running. To confirm this,
 sudo systemctl status docker
 ```
 
+#### To check docker is install or not
+```
+docker info
+```
+#### Check the version of Docker :
 
-  # Reference Link
+```
+sudo docker --version
+```
+#### For help in docker
+```
+docker --help
+```
+# Container
+
+#### To check the container
+```
+docker container ls
+```
+#### How to make a container
+when we run command on terminal it will extract data from this website - https://hub.docker.com/
+Here, ubuntu is os name 
+```
+docker container run ubuntu
+```
+#### See all container
+```
+docker container ls -a
+```
+#### Run container in background only for 60 sec
+```
+docker container run -d ubuntu sleep 60
+```
+#### Make running container 
+```
+docker container run -d -it ubuntu
+```
+#### Stop the container 
+```
+docker container stop (container id)
+```
+#### Start the container
+```
+docker container start (container id)
+```
+#### Restart the container
+```
+docker container restart (container id)
+```
+#### delete a stopped container
+```
+docker container rm (container id)
+```
+#### delete a running container
+```
+docker container rm (container id) -f
+```
+# Apache server 
+Apache is a web server software that is responsible for accepting HTTP requests from visitors and sending them back the requested information in the form of web pages.
+
+#### Make and come inside the container
+```
+docker container run -it ubuntu /bin/bash
+```
+#### update the container
+```
+apt-get update
+```
+#### Install  apache
+```
+apt-get install apache2
+```
+Now come inside the folder
+```
+cd /var/www/html/
+```
+add welcome to keen&able
+```
+echo "welcome to keen&able" >index.html
+```
+#### Restart the service
+```
+service apache2 start
+```
+#### check the ip add
+```
+docker container inspect
+```
+ip add mention in 12th line from last
+
+#### check the output
+```
+curl (ip)
+```
+
+
+
+  # Reference Linkgroups
 - https://docs.docker.com
 - https://sematext.com/glossary/docker/
 - https://www.cherryservers.com/blog/install-docker-ubuntu-22-04
+- https://hub.docker.com/
