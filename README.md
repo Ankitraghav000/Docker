@@ -150,6 +150,14 @@ Apache is a web server software that is responsible for accepting HTTP requests 
 ```
 docker container run -it ubuntu /bin/bash
 ```
+#### Exit from the container
+```
+ctrl+p , ctrl+q
+```
+#### Come inside the container
+```
+docker exec -it (id) /bin/bash
+```
 #### update the container
 ```
 apt-get update
@@ -172,7 +180,7 @@ service apache2 start
 ```
 #### check the ip add
 ```
-docker container inspect
+docker container inspect (id)
 ```
 ip add mention in 12th line from last
 
@@ -180,6 +188,12 @@ ip add mention in 12th line from last
 ```
 curl (ip)
 ```
+#### check how much space container have used
+```
+docker container stats (id)
+```
+# Container port mapping
+
 
 
 
