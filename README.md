@@ -269,7 +269,22 @@ docker container commit (id) imagename
 docker image ls
 ```
 # Docker hub
+Docker Hub is a container registry built for developers and open source contributors to find, use, and share their container images.
+![Docker-hub-registry(1)](https://github.com/user-attachments/assets/57b90ca6-9356-4fe0-a3b2-d4bbaf000bf8)
 
+
+- visit https://hub.docker.com/
+- create an account
+
+## Pull images
+- search image name in search bar
+- copy the command
+- paste the command in your terminal
+
+  for instance, I want a mysql image  then I searched the my sql and copy
+  ```
+  docker pull mysql
+  ``` 
 
 
   # Reference Linkgroups
