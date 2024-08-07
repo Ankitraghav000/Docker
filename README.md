@@ -156,6 +156,10 @@ ctrl+p , ctrl+q
 ```
 #### Come inside the container
 ```
+docker container attach (id)
+```
+or
+```
 docker exec -it (id) /bin/bash
 ```
 #### update the container
@@ -193,7 +197,78 @@ curl (ip)
 docker container stats (id)
 ```
 # Container port mapping
+In Docker, port mapping is the process of making a specific port of a container accessible from the host machine or network. This allows services running inside the container to be accessed externally.
+#### create container with port no 
+```
+docker container run -it -p 3600:80 ubuntu /bin/bash
+```
+#### install apache server 
+```
+apt-get install apache2
+```
+Now come inside the folder
+```
+cd /var/www/html/
+```
+add welcome to keen&able
+```
+echo "welcome to keen&able" >index.html
+```
+#### Restart the service
+```
+service apache2 start
+```
+#### Now check your system ip in another tab
+```
+ifconfig
+```
+#### Paste this on web browser
+```
+ip add :3600
+```
+## Change container name
+```
+docker container rename (id) (new name)
+```
+## Pause the container
+```
+docker container pause (id/name)
+```
+## Unpause the container
+```
+docker container unpause (id/name)
+```
+# import the data from system 
+```
+docker container cp docker.svg (id):/[location(tmp)]
+```
+# Docker image
+Docker images are used to create containers, which are instances of these images running in an isolated environment.
 
+
+#### Export and import the container
+```
+docker container export ID>(file name)
+```
+#### create image
+```
+docker image import (filename) imagename
+```
+#### create container with image
+```
+docker container run -it imagename /bin/bash
+```
+#### create image directly
+In last two commands firstly we have to export the data in file then convert to docker image
+Now, we can create image directly 
+```
+docker container commit (id) imagename
+```
+#### To check
+```
+docker image ls
+```
+# Docker hub
 
 
 
