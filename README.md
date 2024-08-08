@@ -5,7 +5,7 @@
 
 1.  Introduction of Docker
 2.  Introduction of container
-3.  use of Docker
+3.  Use of Docker
 4.  Installation
 5.  Container
 6.  Apache server 
