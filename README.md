@@ -424,15 +424,21 @@ Paste this command in terminal to come inside the volume.
 cd /var/lib/docker/volumes/myvol/_data
 ```
 ### Create some file
+
+Paste this command in terminal to create some file inside the terminal.
 ```
 touch abc{1..10}
 ```
 
 ### Create container with attach volume
+
+Paste this command in terminal to create  container with attached volume.
 ```
 docker container run -it -v (vol name):/tmp --name (xyz) ubuntu /bin/bash
 ```
 ### Check volume data is available or not
+
+Paste this command in terminal to check volume's data that we have attached. 
 ```
 cd /mnt/
 ```
