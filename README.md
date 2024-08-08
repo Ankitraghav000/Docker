@@ -75,7 +75,7 @@ sudo apt install apt-transport-https ca-certificates curl software-properties-co
 ```
 #### Step 3.Install Docker
 
-Paste this command in terminal  to install docker
+Paste this command in terminal  to install docker.
 ```
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 ```
@@ -87,7 +87,7 @@ update the local package index once more.
 ```
 sudo apt update
 ```
-Now, install Docker Community Edition 
+Now, install Docker Community Edition:
 ```
 sudo apt install docker-ce -y
 ```
@@ -123,7 +123,7 @@ docker container ls
 ```
 #### How to make a container
 when we run command on terminal it will extract data from this website - https://hub.docker.com/
-Here, ubuntu is OS name 
+Here, ubuntu is OS name.
 ```
 docker container run ubuntu
 ```
@@ -138,7 +138,7 @@ Paste this command in terminal and container will run in background only for 60 
 ```
 docker container run -d ubuntu sleep 60
 ```
-- -d Stands for :Detached mode
+- -d Stands for Detached mode.
 - Purpose: Runs the container in the background.
 #### Make running container 
 
@@ -146,7 +146,7 @@ Paste this command in terminal create a running container.
 ```
 docker container run -d -it ubuntu
 ```
-- -it Stands for: Interactive 
+- -it Stands for Interactive 
 - Purpose: Allows you to interact with the container.
 
 #### Stop the container 
@@ -216,11 +216,11 @@ Paste this command in terminal and apache will install into your container.
 ```
 apt-get install apache2
 ```
-Now come inside the folder
+Now come inside the folder:
 ```
 cd /var/www/html/
 ```
-add welcome to keen&able
+Add welcome to keen&able.
 ```
 echo "welcome to keen&able" >index.html
 ```
@@ -255,21 +255,21 @@ docker container stats (id)
 In Docker, port mapping is the process of making a specific port of a container accessible from the host machine or network. This allows services running inside the container to be accessed externally.
 #### Create container with port no 
 
-Paste this command in terminal to create container with changed port no
+Paste this command in terminal to create container with changed port no.
 ```
 docker container run -it -p 3600:80 ubuntu /bin/bash
 ```
 #### Install apache
 
-Paste this command in terminal to install apache 
+Paste this command in terminal to install apache.
 ```
 apt-get install apache2
 ```
-Now come inside the folder
+Now come inside the folder:
 ```
 cd /var/www/html/
 ```
-add welcome to keen&able
+Add welcome to keen&able.
 ```
 echo "welcome to keen&able" >index.html
 ```
@@ -285,7 +285,7 @@ Paste this command in another terminal to check ip
 ifconfig
 ```
 #### Paste this on web browser
-paste the ip with port no then data will be visible on webserver.
+Paste the ip with port no then data will be visible on webserver.
 ```
 ip add :3600
 ```
@@ -323,7 +323,7 @@ docker container export ID>(file name)
 ```
 #### Create image
 
-Paste this command in terminal to import and making image by the container's file
+Paste this command in terminal to import and making image by the container's file.
 ```
 docker image import (filename) imagename
 ```
@@ -334,7 +334,7 @@ Paste this command in terminal to create container with image.
 docker container run -it imagename /bin/bash
 ```
 #### Create image directly
-In last two commands firstly we have to export the data in file then convert to docker image
+In last two commands firstly we have to export the data in file then convert to docker image.
 Now, we can create image directly 
 ```
 docker container commit (id) imagename
@@ -350,14 +350,14 @@ Docker Hub is a container registry built for developers and open source contribu
 ![Docker-hub-registry(1)](https://github.com/user-attachments/assets/57b90ca6-9356-4fe0-a3b2-d4bbaf000bf8)
 
 
-- visit https://hub.docker.com/
-- create an account
+- visit https://hub.docker.com/ 
+- create an account.
 
 ## Pull image
 There is following steps to pull the image:
-- search image name in search bar
-- copy the command
-- paste the command in your terminal
+- Search image name in search bar.
+- Copy the command.
+- Paste the command in your terminal.
 
   for instance, I want a mysql image  then I searched the my sql and copy
   ```
@@ -365,21 +365,21 @@ There is following steps to pull the image:
   ``` 
 ## Push image
 There is following steps to push the image: 
-- create docker tag
-- login into docker acc via cli mode
-- push the image
+- Create docker tag.
+- Login into docker account via cli mode.
+- Push the image.
   
 Note : you have make unique name for image, same name image is not acceptable.<br>
 you have to create tag in same manner that is given below.
 ### docker tag
 
-Paste this command in terminal to tag the image
+Paste this command in terminal to tag the image.
 ```
 docker tag imagename username/(any name)
 ```
 ### Login via cli into docker hub account
 
-Paste this command in terminal to login via cli into docker hub account
+Paste this command in terminal to login via cli into docker hub account.
 ```
 docker login
 ```
@@ -450,8 +450,8 @@ Manager can manage container,image and volume at workers node.
 
 Docker Swarm is made up of two main components:
 
-- Manager Nodes / Master Nodes
-- Worker Nodes
+- Manager Nodes / Master Nodes.
+- Worker Nodes.
 
 ![jdbsqluohzrw5ku5l096](https://github.com/user-attachments/assets/41d87518-8eea-4d17-8eb1-f2673a8e5e8a)
 
