@@ -163,7 +163,7 @@ or
 docker exec -it (id) /bin/bash
 ```
 #### update the container
-```
+```ar2002/webimage
 apt-get update
 ```
 #### Install  apache
@@ -285,8 +285,62 @@ Docker Hub is a container registry built for developers and open source contribu
   ```
   docker pull mysql
   ``` 
+## Push image
+same name no image
+### docker tag
+```
+docker tag imagename username/(any name)
+```
+### Login via cli into docker hub account
+```
+docker login
+```
+### Push the image
+```
+docker push (imagename)/{ar2002/webimage}
+```
+Now, In whole world your image can be acess by docker hub.
 
+# Docker volume
+A Docker volume is a storage, that is attached to conatiner and store all the data of container if in case container is stopped or crash than we can use this volume.
+### check volume
+```
+docker volume ls
+```
+### For help
+```
+docker volume --help
+```
+ ### create volume
+ ```
+docker volume create (volume name)
+```
+### Check path
+```
+docker volume inspect myvol
+```
+### copy path and paste in terminal 
+```
+cd /var/lib/docker/volumes/myvol/_data
+```
+### create some file
+```
+touch abc{1..10}
+```
 
+### Create container with attach volume
+```
+docker container run -it -v (vol name):/tmp --name (xyz) ubuntu /bin/bash
+```
+### check volume data is available or not
+```
+cd /mnt/
+```
+
+# Docker swarm
+```
+
+```
   # Reference Linkgroups
 - https://docs.docker.com
 - https://sematext.com/glossary/docker/
