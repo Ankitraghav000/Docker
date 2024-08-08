@@ -274,46 +274,62 @@ add welcome to keen&able
 echo "welcome to keen&able" >index.html
 ```
 #### Restart the service
+
+Paste this command in terminal to start service.
 ```
 service apache2 start
 ```
 #### Now check your system ip in another tab
+Paste this command in another terminal to check ip
 ```
 ifconfig
 ```
 #### Paste this on web browser
+paste the ip with port no then data will be visible on webserver.
 ```
 ip add :3600
 ```
 ## Change container name
+
+Paste this command in terminal change the container name.
 ```
 docker container rename (id) (new name)
 ```
 ## Pause the container
+
+Paste this command in terminal to pause the container.
 ```
 docker container pause (id/name)
 ```
 ## Unpause the container
+Paste this command in terminal to unpause the container.
 ```
 docker container unpause (id/name)
 ```
 # Import the data from system 
+
+Paste this command in terminal to copy data from system and paste into conatiner.
 ```
 docker container cp docker.svg (id):/[location(tmp)]
 ```
 # Docker image
 Docker images are used to create containers, which are instances of these images running in an isolated environment.
 
-
 #### Export and import the container
+
+Paste this command in terminal to export the container data into a file.
 ```
 docker container export ID>(file name)
 ```
 #### Create image
+
+Paste this command in terminal to import and making image by the container's file
 ```
 docker image import (filename) imagename
 ```
 #### Create container with image
+
+Paste this command in terminal to create container with image.
 ```
 docker container run -it imagename /bin/bash
 ```
@@ -324,6 +340,8 @@ Now, we can create image directly
 docker container commit (id) imagename
 ```
 #### To check
+
+Paste this command in terminal to  check image list.
 ```
 docker image ls
 ```
@@ -335,7 +353,8 @@ Docker Hub is a container registry built for developers and open source contribu
 - visit https://hub.docker.com/
 - create an account
 
-## Pull images
+## Pull image
+There is following steps to pull the image:
 - search image name in search bar
 - copy the command
 - paste the command in your terminal
@@ -345,8 +364,15 @@ Docker Hub is a container registry built for developers and open source contribu
   docker pull mysql
   ``` 
 ## Push image
-same name no image
+There is following steps to push the image: 
+- create docker tag
+- login into docker acc via cli mode
+- push the image
+Note : you have make unique name for image, same name image is not acceptable.
+       you have to create tag in same manner that is given below.
 ### docker tag
+
+Paste this command in terminal to tag the image
 ```
 docker tag imagename username/(any name)
 ```
