@@ -368,8 +368,9 @@ There is following steps to push the image:
 - create docker tag
 - login into docker acc via cli mode
 - push the image
-Note : you have make unique name for image, same name image is not acceptable.
-       you have to create tag in same manner that is given below.
+  
+Note : you have make unique name for image, same name image is not acceptable.<br>
+you have to create tag in same manner that is given below.
 ### docker tag
 
 Paste this command in terminal to tag the image
@@ -377,34 +378,48 @@ Paste this command in terminal to tag the image
 docker tag imagename username/(any name)
 ```
 ### Login via cli into docker hub account
+
+Paste this command in terminal to login via cli into docker hub account
 ```
 docker login
 ```
 ### Push the image
+
+Paste this command in terminal to push image on docker hub.
 ```
 docker push (imagename)/{ar2002/webimage}
 ```
-Now, In whole world your image can be acess by docker hub.
+Now, In whole world your image will available on docker hub.
 
 # Docker volume
 A Docker volume is a storage, that is attached to conatiner and store all the data of container if in case container is stopped or crash than we can use this volume.
 ### Check volume
+
+Paste this command in terminal to check volume.
 ```
 docker volume ls
 ```
 ### For help
+
+Paste this command in terminal for image related help.
 ```
 docker volume --help
 ```
  ### Create volume
+
+ Paste this command in terminal to create volume.
  ```
 docker volume create (volume name)
 ```
 ### Check path
+
+Paste this command in terminal to check the path of volume.
 ```
 docker volume inspect myvol
 ```
 ### Copy path and paste in terminal 
+
+Paste this command in terminal to come inside the volume.
 ```
 cd /var/lib/docker/volumes/myvol/_data
 ```
