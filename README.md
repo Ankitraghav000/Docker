@@ -123,6 +123,12 @@ docker container run -d ubuntu sleep 60
 ```
 docker container run -d -it ubuntu
 ```
+Here, 
+-d Stands for :Detached mode
+Purpose: Runs the container in the background.
+-it Stands for: Interactive 
+Purpose: Allows you to interact with the container.
+
 #### Stop the container 
 ```
 docker container stop (container id)
