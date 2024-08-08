@@ -1,11 +1,11 @@
 # Docker
 ![docker](https://github.com/user-attachments/assets/d1ed98b0-fd20-4af5-9a88-2db45d5c6911)
 
-# Table of content
+## Table of content
 
-1.  What is Docker
-2.  What is container
-3.  Why we use Docker
+1.  Introduction of Docker
+2.  Introduction of container
+3.  use of Docker
 4.  Installation
 5.  Container
 6.  Apache server 
@@ -20,13 +20,13 @@
 
 
     
-  # What is Docker?
+  # Introduction of Docker
   Docker is a tool that keeps everything your app needs in one place.Docker provide platform as a service (PaaS) that use OS-level virtualization to deliver software in packages called containers.
 
-  # What is Container?
+  # Introduction of Container
   Container is like a box that provide a way of creating an isolated environment,in which applications and their dependencies can live.
 
-  # Why we use Docker?
+  # Use of Docker
   We use Docker for several key reasons:
   ### Cost-saving: 
   Docker containers use far less memory, especially when compared to their counterparts (virtual machines). Thus, you spend less on IT infrastructure resources.
