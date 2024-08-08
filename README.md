@@ -340,6 +340,11 @@ cd /mnt/
 # Docker swarm
 
 
+Docker Swarm is made up of two main components:
+
+1-Manager Nodes / Master Nodes
+2-Worker Nodes
+![jdbsqluohzrw5ku5l096](https://github.com/user-attachments/assets/41d87518-8eea-4d17-8eb1-f2673a8e5e8a)
 ```
 
 ```
@@ -348,3 +353,4 @@ cd /mnt/
 - https://sematext.com/glossary/docker/
 - https://www.cherryservers.com/blog/install-docker-ubuntu-22-04
 - https://hub.docker.com/
+- https://dev.to/shankarsurya035/how-to-install-and-configure-docker-swarm-on-linux-oe0
