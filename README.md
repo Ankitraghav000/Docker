@@ -117,14 +117,13 @@ docker container ls -a
 ```
 docker container run -d ubuntu sleep 60
 ```
+- -d Stands for :Detached mode
+Purpose: Runs the container in the background.
 #### Make running container 
 ```
 docker container run -d -it ubuntu
 ```
-Here, 
--d Stands for :Detached mode
-Purpose: Runs the container in the background.
--it Stands for: Interactive 
+- -it Stands for: Interactive 
 Purpose: Allows you to interact with the container.
 
 #### Stop the container 
