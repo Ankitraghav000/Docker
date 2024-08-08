@@ -4,19 +4,21 @@
 2.  what is container
 3.  Why we use Docker
 4.  Installation
-5.  Apache server
-6.  
-7.  What are Docker Images
-8.  What is a Docker Container
-9.  Flow of Docker
-10.  Docker Daemon
-11.  Docker Client
-12. Docker Host
-13. Docker Hub/Registry
-14. Architecture of Docker
-15. Basic Docker Commands
-16. Conclusion
-17. Reference Links
+5.  Container
+6.  Apache server 
+7.  Container port mapping
+8.  Import the data from system 
+9.  Docker image
+10. Docker hub 
+11. Docker volume
+12. Docker swarm
+13. 
+14. Docker Host
+15. Docker Hub/Registry
+16. Architecture of Docker
+17. Basic Docker Commands
+18. Conclusion
+19. Reference Links
 
 ![docker](https://github.com/user-attachments/assets/d1ed98b0-fd20-4af5-9a88-2db45d5c6911)
     
@@ -244,7 +246,7 @@ docker container pause (id/name)
 ```
 docker container unpause (id/name)
 ```
-# import the data from system 
+# Import the data from system 
 ```
 docker container cp docker.svg (id):/[location(tmp)]
 ```
@@ -344,6 +346,8 @@ cd /mnt/
 ```
 
 # Docker swarm
+Docker Swarm is a tool that allows you to manage workers by an individual manager.
+Manager can manage container,image and volume at workers node.
 
 
 Docker Swarm is made up of two main components:
