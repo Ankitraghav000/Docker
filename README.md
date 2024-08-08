@@ -1,7 +1,10 @@
 # Docker
+![docker](https://github.com/user-attachments/assets/d1ed98b0-fd20-4af5-9a88-2db45d5c6911)
+
+# Table of content
 
 1.  What is Docker
-2.  what is container
+2.  What is container
 3.  Why we use Docker
 4.  Installation
 5.  Container
@@ -16,7 +19,6 @@
 14. Reference Links
 
 
-![docker](https://github.com/user-attachments/assets/d1ed98b0-fd20-4af5-9a88-2db45d5c6911)
     
   # What is Docker?
   Docker is a tool that keeps everything your app needs in one place.Docker provide platform as a service (PaaS) that use OS-level virtualization to deliver software in packages called containers.
@@ -42,28 +44,38 @@ Docker makes setting up applications straightforward. You don’t need to manual
 ### version
  Ubuntu 20.04.6 LTS
  #### How to check the version?
+ 
+ Paste this command in terminal  to check the version.
  ```
  lsb_release -a
 ```
 ### RAM 
-At least 2 GB of RAM
+At least we have 2 GB of RAM in our system to run docker.
 #### How to check the RAM?
+
+Paste this command in terminal  to check the RAM.
  ```
  free -h
 ```
 #### Step 1. up-to-date system by using following command :
+
+Paste this command in terminal to update your system.
 ```
  sudo apt-get update
 ```
-sometime curl package is not install in system, To install curl use this command: 
+- sometime curl package is not install in system, To install curl use this command: 
 ```
  sudo apt-get install curl
 ```
 #### Step 2. Install the dependency packages required to install Docker.
+
+Paste this command in terminal  to Install the dependency packages.
 ```
 sudo apt install apt-transport-https ca-certificates curl software-properties-common
 ```
 #### Step 3.Install Docker
+
+Paste this command in terminal  to install docker
 ```
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 ```
@@ -83,23 +95,29 @@ Once installed, the Docker daemon or service should be running. To confirm this,
 ```
 sudo systemctl status docker
 ```
-
 #### To check docker is install or not
+
+Paste this command in terminal  to check docker is install or not.
 ```
 docker info
 ```
 #### Check the version of Docker :
 
+Paste this command in terminal  to check the version of Docker.
 ```
 sudo docker --version
 ```
 #### For help in docker
+
+Paste this command in terminal for docker related command help.
 ```
 docker --help
 ```
 # Container
 
 #### To check the container
+
+Paste this command in terminal to check the containers list.
 ```
 docker container ls
 ```
@@ -110,16 +128,21 @@ Here, ubuntu is OS name
 docker container run ubuntu
 ```
 #### See all container
+Paste this command in terminal to check running and stopped container list.
 ```
 docker container ls -a
 ```
 #### Run container in background only for 60 sec
+
+Paste this command in terminal and container will run in background only for 60 sec.
 ```
 docker container run -d ubuntu sleep 60
 ```
 - -d Stands for :Detached mode
 - Purpose: Runs the container in the background.
 #### Make running container 
+
+Paste this command in terminal create a running container.
 ```
 docker container run -d -it ubuntu
 ```
@@ -127,37 +150,53 @@ docker container run -d -it ubuntu
 - Purpose: Allows you to interact with the container.
 
 #### Stop the container 
+
+Paste this command in terminal with your conatiner id and it will stop.
 ```
 docker container stop (container id)
 ```
 #### Start the container
+
+Paste this command in terminal with your conatiner id and it will start.
 ```
 docker container start (container id)
 ```
 #### Restart the container
+
+Paste this command in terminal with your conatiner id and running container will restart.
 ```
 docker container restart (container id)
 ```
 #### delete a stopped container
+
+Paste this command in terminal with your conatiner id and it will deleted.
 ```
 docker container rm (container id)
 ```
 #### Delete a running container
+
+Paste this command in terminal with your conatiner id and your running container will be deleted.
 ```
 docker container rm (container id) -f
 ```
 # Apache server 
 Apache is a web server software that is responsible for accepting HTTP requests from visitors and sending them back the requested information in the form of web pages.
 
-#### Make and come inside the container
+#### Create and come inside the container
+
+Paste this command in terminal you will come inside the new container.
 ```
 docker container run -it ubuntu /bin/bash
 ```
 #### Exit from the container
+
+Paste this command in terminal and you will exit from container.
 ```
 ctrl+p , ctrl+q
 ```
 #### Come inside the container
+
+Paste this command in terminal you will come inside the container.
 ```
 docker container attach (id)
 ```
@@ -166,10 +205,14 @@ or
 docker exec -it (id) /bin/bash
 ```
 #### Update the container
-```ar2002/webimage
+
+Paste this command in terminal inside the container ,container will be updated.
+```
 apt-get update
 ```
 #### Install  apache
+
+Paste this command in terminal and apache will install into your container.
 ```
 apt-get install apache2
 ```
@@ -182,30 +225,43 @@ add welcome to keen&able
 echo "welcome to keen&able" >index.html
 ```
 #### Restart the service
+
+Paste this command in terminal to restart apache service.
 ```
 service apache2 start
 ```
 #### Check the ip add
+
+Paste this command in terminal to check ip of container. 
 ```
 docker container inspect (id)
 ```
-ip add mention in 12th line from last
+- ip add mention in 12th line from last
 
 #### Check the output
+
+
+Paste this command in terminal to check apache server output on terminal.
 ```
 curl (ip)
 ```
 #### Check how much space container have used
+
+Paste this command in terminal with container id to check space used by container.
 ```
 docker container stats (id)
 ```
 # Container port mapping
 In Docker, port mapping is the process of making a specific port of a container accessible from the host machine or network. This allows services running inside the container to be accessed externally.
 #### Create container with port no 
+
+Paste this command in terminal to create container with changed port no
 ```
 docker container run -it -p 3600:80 ubuntu /bin/bash
 ```
-#### Install apache server 
+#### Install apache
+
+Paste this command in terminal to install apache 
 ```
 apt-get install apache2
 ```
@@ -353,6 +409,9 @@ Docker Swarm is made up of two main components:
 ![jdbsqluohzrw5ku5l096](https://github.com/user-attachments/assets/41d87518-8eea-4d17-8eb1-f2673a8e5e8a)
 
 Docker swarm needs multiple OS to deploy the service, we can deploy it on any cloud like AWS but it is not open source that's  why basic info is mentaion here about docker swarm.
+
+# Conclusion
+Docker is a platform that make easy the process of building, shipping, and running applications in containers. Containers are lightweight, portable, and consistent across different environments.
 
   # Reference Linkgroups
 - https://docs.docker.com
