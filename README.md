@@ -105,7 +105,7 @@ docker container ls
 ```
 #### How to make a container
 when we run command on terminal it will extract data from this website - https://hub.docker.com/
-Here, ubuntu is os name 
+Here, ubuntu is OS name 
 ```
 docker container run ubuntu
 ```
