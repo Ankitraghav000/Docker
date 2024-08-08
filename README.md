@@ -12,13 +12,9 @@
 10. Docker hub 
 11. Docker volume
 12. Docker swarm
-13. 
-14. Docker Host
-15. Docker Hub/Registry
-16. Architecture of Docker
-17. Basic Docker Commands
-18. Conclusion
-19. Reference Links
+13. Conclusion
+14. Reference Links
+
 
 ![docker](https://github.com/user-attachments/assets/d1ed98b0-fd20-4af5-9a88-2db45d5c6911)
     
@@ -352,12 +348,13 @@ Manager can manage container,image and volume at workers node.
 
 Docker Swarm is made up of two main components:
 
-1-Manager Nodes / Master Nodes
-2-Worker Nodes
-![jdbsqluohzrw5ku5l096](https://github.com/user-attachments/assets/41d87518-8eea-4d17-8eb1-f2673a8e5e8a)
-```
+- Manager Nodes / Master Nodes
+- Worker Nodes
 
-```
+![jdbsqluohzrw5ku5l096](https://github.com/user-attachments/assets/41d87518-8eea-4d17-8eb1-f2673a8e5e8a)
+
+Docker swarm needs multiple OS to deploy the service, we can deploy it on any cloud like AWS but it is not open source that's  why basic info is mentaion here about docker swarm.
+
   # Reference Linkgroups
 - https://docs.docker.com
 - https://sematext.com/glossary/docker/
