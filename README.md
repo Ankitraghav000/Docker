@@ -142,7 +142,7 @@ docker container restart (container id)
 ```
 docker container rm (container id)
 ```
-#### delete a running container
+#### Delete a running container
 ```
 docker container rm (container id) -f
 ```
@@ -165,7 +165,7 @@ or
 ```
 docker exec -it (id) /bin/bash
 ```
-#### update the container
+#### Update the container
 ```ar2002/webimage
 apt-get update
 ```
@@ -185,27 +185,27 @@ echo "welcome to keen&able" >index.html
 ```
 service apache2 start
 ```
-#### check the ip add
+#### Check the ip add
 ```
 docker container inspect (id)
 ```
 ip add mention in 12th line from last
 
-#### check the output
+#### Check the output
 ```
 curl (ip)
 ```
-#### check how much space container have used
+#### Check how much space container have used
 ```
 docker container stats (id)
 ```
 # Container port mapping
 In Docker, port mapping is the process of making a specific port of a container accessible from the host machine or network. This allows services running inside the container to be accessed externally.
-#### create container with port no 
+#### Create container with port no 
 ```
 docker container run -it -p 3600:80 ubuntu /bin/bash
 ```
-#### install apache server 
+#### Install apache server 
 ```
 apt-get install apache2
 ```
@@ -253,15 +253,15 @@ Docker images are used to create containers, which are instances of these images
 ```
 docker container export ID>(file name)
 ```
-#### create image
+#### Create image
 ```
 docker image import (filename) imagename
 ```
-#### create container with image
+#### Create container with image
 ```
 docker container run -it imagename /bin/bash
 ```
-#### create image directly
+#### Create image directly
 In last two commands firstly we have to export the data in file then convert to docker image
 Now, we can create image directly 
 ```
@@ -306,7 +306,7 @@ Now, In whole world your image can be acess by docker hub.
 
 # Docker volume
 A Docker volume is a storage, that is attached to conatiner and store all the data of container if in case container is stopped or crash than we can use this volume.
-### check volume
+### Check volume
 ```
 docker volume ls
 ```
@@ -314,7 +314,7 @@ docker volume ls
 ```
 docker volume --help
 ```
- ### create volume
+ ### Create volume
  ```
 docker volume create (volume name)
 ```
@@ -322,11 +322,11 @@ docker volume create (volume name)
 ```
 docker volume inspect myvol
 ```
-### copy path and paste in terminal 
+### Copy path and paste in terminal 
 ```
 cd /var/lib/docker/volumes/myvol/_data
 ```
-### create some file
+### Create some file
 ```
 touch abc{1..10}
 ```
@@ -335,7 +335,7 @@ touch abc{1..10}
 ```
 docker container run -it -v (vol name):/tmp --name (xyz) ubuntu /bin/bash
 ```
-### check volume data is available or not
+### Check volume data is available or not
 ```
 cd /mnt/
 ```
