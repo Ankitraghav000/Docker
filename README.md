@@ -49,6 +49,8 @@ Docker makes setting up applications straightforward. You don’t need to manual
  ```
  lsb_release -a
 ```
+- lsb_release: Stands for "Linux Standard Base release." It is a command-line tool that provides information about the Linux distribution's release.
+- -a: This option stands for "all." It instructs the command to display all available information.
 ### RAM 
 At least we have 2 GB of RAM in our system to run docker.
 #### How to check the RAM?
