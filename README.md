@@ -125,7 +125,7 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docke
 - signed-by=/usr/share/keyrings/docker-archive-keyring.gpg: Uses Docker's GPG key for package verification.
 - https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable: URL of the Docker repository, tailored to your Ubuntu version and targeting the stable release.
 - sudo tee /etc/apt/sources.list.d/docker.list: Saves this information in a new file to be used by the package manager.
--  /dev/null: Suppresses command output.<br>
+-  /dev/null: no output or feedback from the command is displayed to the user.<br>
 
 update the local package index once more.
 ```
