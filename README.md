@@ -59,6 +59,9 @@ Paste this command in terminal  to check the RAM.
  ```
  free -h
 ```
+- free: This command displays the total amount of free and used physical memory (RAM) and swap memory in the system, as well as the buffers and caches used by the kernel.
+
+- -h: This option stands for "human-readable." It modifies the output to be in a format that is easier to read, typically using units like KB, MB, or GB instead of displaying the memory in bytes.
 #### Step 1. up-to-date system by using following command :
 
 Paste this command in terminal to update your system.
