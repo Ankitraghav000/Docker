@@ -101,7 +101,7 @@ Paste this command in terminal  to install docker.
 ```
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 ```
-- curl -fsSL: This part of the command downloads the Docker GPG key from the specified URL.
+- curl -fsSL: This part of the command downloads the Docker GPG key from the specified URL.<br>
 -f(fail): Stops the command if the server returns an error.<br>
 -s(silent): Runs the command quietly without showing the progress bar.<br>
 -S(show errors): Ensures that errors are still shown even if -s is used.<br>
