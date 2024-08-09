@@ -123,7 +123,7 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docke
 - deb: Specifies a Debian package repository.
 - [arch=$(dpkg --print-architecture)]: Includes the system architecture (e.g., amd64).
 - signed-by=/usr/share/keyrings/docker-archive-keyring.gpg: Uses Docker's GPG key for package verification.
-- https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable: URL of the Docker repository, tailored to your Ubuntu version and targeting the stable release.
+- https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable: URL leads to the specific location where Docker's stable version for your particular Ubuntu version can be downloaded and installed.
 - sudo tee /etc/apt/sources.list.d/docker.list: Saves this information in a new file to be used by the package manager.
 -  /dev/null: no output or feedback from the command is displayed to the user.<br>
 
@@ -135,6 +135,9 @@ Now, install Docker Community Edition:
 ```
 sudo apt install docker-ce -y
 ```
+docker-ce: Specifies the package name for Docker Community Edition, which is the free, open-source version of Docker.<br>
+
+-y: Automatically answers "yes" to any prompts that may appear during the installation process.
 Once you installed the Docker daemon or service, it should be running. To confirm this, run the command:
 ```
 sudo systemctl status docker
