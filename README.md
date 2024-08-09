@@ -101,6 +101,21 @@ Paste this command in terminal  to install docker.
 ```
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 ```
+- curl -fsSL: This part of the command downloads the Docker GPG key from the specified URL.
+        -f: Fail silently on server errors (4xx or 5xx HTTP codes).
+        -s: Silent mode, which suppresses progress and error messages.
+        -L: Follow redirects if the URL is redirected to another location.
+
+- |: This is a pipe operator that passes the output of the curl command directly to the next command.
+
+- sudo gpg --dearmor: This command converts the downloaded GPG key from ASCII format (armored format) to binary format.
+- gpg: Stands for GNU Privacy Guard, a tool for secure communication and data storage.
+- --dearmor: Converts the key from its armored (text) format to a binary format.
+
+- -o /usr/share/keyrings/docker-archive-keyring.gpg: This specifies the output file where the binary GPG key will be stored.
+- /usr/share/keyrings/: A directory commonly used to store keyrings for system-wide authentication.
+- docker-archive-keyring.gpg**: The name of the file where the Docker GPG key is saved in binary format
+  
 Next, add the Docker APT repository to your system in the sources.list.d directory.
 ```
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
