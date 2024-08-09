@@ -29,7 +29,7 @@
   # Use of Docker
   We use Docker for several key reasons:
   ### Cost-saving: 
-  Docker containers use far less memory, especially when compared to their counterparts (virtual machines). Thus, you spend less on IT infrastructure resources.
+  Docker containers use less memory, Thus, you spend less amount on IT infrastructure.
   
   ### Isolation:
   Docker containers are isolated from each other and from the host system, which helps prevent conflicts between applications and improves security.
@@ -91,7 +91,7 @@ Now, install Docker Community Edition:
 ```
 sudo apt install docker-ce -y
 ```
-Once installed, the Docker daemon or service should be running. To confirm this, run the command:
+Once you installed the Docker daemon or service, it should be running. To confirm this, run the command:
 ```
 sudo systemctl status docker
 ```
@@ -180,7 +180,7 @@ Paste this command in terminal with your conatiner id and your running container
 docker container rm (container id) -f
 ```
 # Apache server 
-Apache is a web server software that is responsible for accepting HTTP requests from visitors and sending them back the requested information in the form of web pages.
+Apache is a web server tool that is accepting HTTP requests from visitors and sending them back the requested information in the form of web pages.
 
 #### Create and come inside the container
 
