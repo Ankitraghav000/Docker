@@ -95,8 +95,6 @@ Once installed, the Docker daemon or service should be running. To confirm this,
 ```
 sudo systemctl status docker
 ```
-![Screenshot from 2024-08-09 11-03-16](https://github.com/user-attachments/assets/3d2da9fe-2a31-4bd0-b355-8d16197d5a8f)
-
 #### To check docker is install or not
 
 Paste this command in terminal  to check docker is install or not.
