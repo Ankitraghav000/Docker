@@ -4,7 +4,7 @@
 ## Table of content
 
 1.  Introduction to Docker
-2.  Introduction to container
+2.  Introduction to Container
 3.  Use of Docker
 4.  Installation
 5.  Container
@@ -16,7 +16,7 @@
 11. Docker volume
 12. Docker swarm
 13. Conclusion
-14. Reference Links
+14. Reference links
 
 
     
