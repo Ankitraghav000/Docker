@@ -77,13 +77,24 @@ Paste this command in terminal to update your system.
 ```
  sudo apt-get install curl
 ```
-curl: This is the name of the package you want to install. curl is a command-line tool used to transfer data to or from a server. It supports various protocols, including HTTP, HTTPS, FTP, and more.
+curl: This is the name of the package you want to install. curl is a command-line tool used to transfer data to or from a server. It supports various protocols, including HTTP, HTTPS and FTP.
 #### Step 3. Install the dependency packages required to install Docker.
 
 Paste this command in terminal  to Install the dependency packages.
 ```
 sudo apt install apt-transport-https ca-certificates curl software-properties-common
 ```
+- sudo: Runs the command with superuser (administrator) privileges.
+
+- apt install: Installs the specified packages.
+
+- apt-transport-https: Enables apt to retrieve packages over the HTTPS protocol, which is more secure than HTTP.
+
+- ca-certificates: Installs digital certificates to ensure the system can verify the authenticity of HTTPS connections.
+
+- curl: A command-line tool for transferring data using various protocols, such as HTTP, HTTPS, and FTP.
+
+- software-properties-common: Provides tools to manage software repositories, including adding new ones
 #### Step 4.Install Docker
 
 Paste this command in terminal  to install docker.
