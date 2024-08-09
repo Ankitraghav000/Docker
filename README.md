@@ -73,17 +73,17 @@ Paste this command in terminal to update your system.
 - apt-get: This is a command-line tool for handling packages. It allows you to install, update, and remove software packages on your system.
 
 - update: This subcommand tells apt-get to download the latest package lists from the repositories specified in your system's configuration files (typically found in /etc/apt/sources.list)
-- sometime curl package is not install in system, To install curl use this command: 
+#### step2:sometime curl package is not install in system, To install curl use this command: 
 ```
  sudo apt-get install curl
 ```
-#### Step 2. Install the dependency packages required to install Docker.
+#### Step 3. Install the dependency packages required to install Docker.
 
 Paste this command in terminal  to Install the dependency packages.
 ```
 sudo apt install apt-transport-https ca-certificates curl software-properties-common
 ```
-#### Step 3.Install Docker
+#### Step 4.Install Docker
 
 Paste this command in terminal  to install docker.
 ```
