@@ -460,7 +460,7 @@ Docker swarm needs multiple OS to deploy the service, we can deploy it on any cl
 # Conclusion
 Docker is a platform that make easy the process of building, shipping, and running applications in containers. Containers are lightweight, portable, and consistent across different environments.
 
-  # Reference Linkgroups
+  # Reference link
 - https://docs.docker.com
 - https://sematext.com/glossary/docker/
 - https://www.cherryservers.com/blog/install-docker-ubuntu-22-04
