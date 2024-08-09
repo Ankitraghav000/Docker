@@ -3,8 +3,8 @@
 
 ## Table of content
 
-1.  Introduction of Docker
-2.  Introduction of container
+1.  Introduction to Docker
+2.  Introduction to container
 3.  Use of Docker
 4.  Installation
 5.  Container
@@ -20,10 +20,10 @@
 
 
     
-  # Introduction of Docker
+  # Introduction to Docker
   Docker is a tool that keeps everything your app needs in one place.Docker provide platform as a service (PaaS) that use OS-level virtualization to deliver software in packages called containers.
 
-  # Introduction of Container
+  # Introduction to Container
   Container is like a box that provide a way of creating an isolated environment,in which applications and their dependencies can live.
 
   # Use of Docker
