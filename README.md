@@ -120,6 +120,12 @@ Next, add the Docker APT repository to your system in the sources.list.d directo
 ```
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 ```
+- deb: Specifies a Debian package repository.
+- [arch=$(dpkg --print-architecture)]: Includes the system architecture (e.g., amd64).
+- signed-by=/usr/share/keyrings/docker-archive-keyring.gpg: Uses Docker's GPG key for package verification.
+- https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable: URL of the Docker repository, tailored to your Ubuntu version and targeting the stable release.
+- sudo tee /etc/apt/sources.list.d/docker.list: Saves this information in a new file to be used by the package manager.
+- > /dev/null: Suppresses command output
 update the local package index once more.
 ```
 sudo apt update
