@@ -113,7 +113,7 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o 
 - --dearmor: Converts the key from its armored (text) format to a binary format.
 
 - -o /usr/share/keyrings/docker-archive-keyring.gpg: This specifies the output file where the binary GPG key will be stored.
-- /usr/share/keyrings/: A directory commonly used to store keyrings for system-wide authentication.
+- /usr/share/keyrings/: A directory commonly used to store keyrings for authentication.
 - docker-archive-keyring.gpg**: The name of the file where the Docker GPG key is saved in binary format
   
 Next, add the Docker APT repository to your system in the sources.list.d directory.
