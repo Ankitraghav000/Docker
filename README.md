@@ -70,7 +70,7 @@ Paste this command in terminal to update your system.
 ```
 - sudo: This prefix stands for "superuser do." It allows you to run commands with elevated privileges (as an administrator) that may be required for certain operations, like updating the system.
 
-- apt-get: This is a command-line tool for handling packages. It allows you to install, update, and remove software packages on your system.
+- apt-get: APT: Stands for Advanced Package Tool, This is a command-line tool for handling packages. It allows you to install, update, and remove software packages on your system.
 
 - update: This subcommand tells apt-get to download the latest package lists from the repositories specified in your system's configuration files (typically found in /etc/apt/sources.list)
 #### Step2: sometime curl package is not install in system, To install curl use this command: 
@@ -216,13 +216,13 @@ docker container restart (container id)
 ```
 #### delete a stopped container
 
-Paste this command in terminal with your conatiner id and it will deleted.
+Paste this command in terminal with your conatiner id and it will deleted or removed.
 ```
 docker container rm (container id)
 ```
 #### Delete a running container
 
-Paste this command in terminal with your conatiner id and your running container will be deleted.
+Paste this command in terminal with your conatiner id and your running container will be deleted forcefully (-f).
 ```
 docker container rm (container id) -f
 ```
@@ -237,19 +237,18 @@ docker container run -it ubuntu /bin/bash
 ```
 #### Exit from the container
 
-Paste this command in terminal and you will exit from container.
+Press this command in terminal and you will exit from container.
 ```
-ctrl+p , ctrl+q
+ctrl+p 
+```
+```
+ctrl+q
 ```
 #### Come inside the container
 
 Paste this command in terminal you will come inside the container.
 ```
 docker container attach (id)
-```
-or
-```
-docker exec -it (id) /bin/bash
 ```
 #### Update the container
 
@@ -271,7 +270,7 @@ Add welcome to keen&able.
 ```
 echo "welcome to keen&able" >index.html
 ```
-#### Restart the service
+#### Start the service
 
 Paste this command in terminal to restart apache service.
 ```
@@ -286,7 +285,6 @@ docker container inspect (id)
 - ip add mention in 12th line from last
 
 #### Check the output
-
 
 Paste this command in terminal to check apache server output on terminal.
 ```
@@ -320,7 +318,7 @@ Add welcome to keen&able.
 ```
 echo "welcome to keen&able" >index.html
 ```
-#### Restart the service
+#### Start the service
 
 Paste this command in terminal to start service.
 ```
@@ -340,24 +338,24 @@ ip add :3600
 
 Paste this command in terminal change the container name.
 ```
-docker container rename (id) (new name)
+docker container rename id new name
 ```
 ## Pause the container
 
 Paste this command in terminal to pause the container.
 ```
-docker container pause (id/name)
+docker container pause id/name
 ```
 ## Unpause the container
 Paste this command in terminal to unpause the container.
 ```
-docker container unpause (id/name)
+docker container unpause id/name
 ```
 # Import the data from system 
 
-Paste this command in terminal to copy data from system and paste into conatiner.
+Paste this command in terminal to copy data from system and paste into conatiner's location.
 ```
-docker container cp docker.svg (id):/[location(tmp)]
+docker container cp docker.svg id:/location
 ```
 # Docker image
 Docker images are used to create containers, which are instances of these images running in an isolated environment.
@@ -366,7 +364,7 @@ Docker images are used to create containers, which are instances of these images
 
 Paste this command in terminal to export the container data into a file.
 ```
-docker container export ID>(file name)
+docker container export ID>file name
 ```
 #### Create image
 
@@ -384,7 +382,7 @@ docker container run -it imagename /bin/bash
 In last two commands firstly we have to export the data in file then convert to docker image.
 Now, we can create image directly 
 ```
-docker container commit (id) imagename
+docker container commit id imagename
 ```
 #### To check
 
@@ -406,7 +404,7 @@ There is following steps to pull the image:
 - Copy the command.
 - Paste the command in your terminal.
 
-  for instance, I want a mysql image  then I searched the my sql and copy
+  for instance, I want a mysql image  then I searched the mysql and copy
   ```
   docker pull mysql
   ``` 
@@ -422,7 +420,7 @@ you have to create tag in same manner that is given below.
 
 Paste this command in terminal to tag the image.
 ```
-docker tag imagename username/(any name)
+docker tag imagename username/any name
 ```
 ### Login via cli into docker hub account
 
@@ -434,7 +432,7 @@ docker login
 
 Paste this command in terminal to push image on docker hub.
 ```
-docker push (imagename)/{ar2002/webimage}
+docker push imagename/ar2002/webimage
 ```
 Now, In whole world your image will available on docker hub.
 
@@ -456,13 +454,13 @@ docker volume --help
 
  Paste this command in terminal to create volume.
  ```
-docker volume create (volume name)
+docker volume create volume name
 ```
 ### Check path
 
 Paste this command in terminal to check the path of volume.
 ```
-docker volume inspect myvol
+docker volume inspect volumename
 ```
 ### Copy path and paste in terminal 
 
@@ -481,8 +479,9 @@ touch abc{1..10}
 
 Paste this command in terminal to create  container with attached volume.
 ```
-docker container run -it -v (vol name):/tmp --name (xyz) ubuntu /bin/bash
+docker container run -it -v vol name:/tmp --name xyz ubuntu /bin/bash
 ```
+- -v stand for volume
 ### Check volume data is available or not
 
 Paste this command in terminal to check volume's data that we have attached. 
