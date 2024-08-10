@@ -105,7 +105,7 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o 
 -f(fail): Stops the command if the server returns an error.<br>
 -s(silent): Runs the command quietly without showing the progress bar.<br>
 -S(show errors): Ensures that errors are still shown even if -s is used.<br>
--L(follow redirects): Follows any redirects to download the intended file.<br>
+-L(follow redirects): Follows any redirects to download the file.<br>
 - |: This is a pipe operator that passes the output of the curl command directly to the next command.
 
 - sudo gpg --dearmor: This command converts the downloaded GPG key from ASCII format (armored format) to binary format.
