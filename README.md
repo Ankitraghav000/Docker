@@ -10,7 +10,7 @@
 5.  Container
 6.  Apache server 
 7.  Container port mapping
-8.  Import the data from system 
+8.  Import the data from the system 
 9.  Docker image
 10. Docker hub 
 11. Docker volume
@@ -26,8 +26,8 @@
   # Introduction to Container
   Container is like a box that provide a way of creating an isolated environment,in which applications and their dependencies can live.
 
-  # Use of Docker
-  We use Docker for several key reasons:
+  # Reason to Use of Docker
+  We use Docker for following key reasons:
   ### Cost-saving: 
   Docker containers use less memory, Thus, you spend less amount on IT infrastructure.
   
@@ -77,8 +77,8 @@ Paste this command in terminal to update your system.
 ```
  sudo apt-get install curl
 ```
-curl: This is the name of the package you want to install. curl is a command-line tool used to transfer data to or from a server. It supports various protocols, including HTTP, HTTPS and FTP.
-#### Step 3. Install the dependency packages required to install Docker.
+curl: This is the name of the package you want to install. curl is a command-line tool used to transfer data from a server. It supports various protocols, including HTTP, HTTPS, and FTP.
+#### Step 3. Install the dependency packages to install Docker.
 
 Paste this command in terminal  to Install the dependency packages.
 ```
