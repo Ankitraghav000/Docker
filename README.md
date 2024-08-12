@@ -21,10 +21,10 @@
 
     
   # Introduction to Docker
-  Docker is a tool that keeps everything your app needs in one place. Docker provides a platform as a service (PaaS) that uses OS-level virtualization to deliver software in container packages.
+  Docker is a tool that keeps everything your app needs in one place. Docker provides a platform as a service (PaaS) that uses OS-level virtualization to deliver software in      container packages.
 
   # Introduction to Container
-  A container is like a box that creates an isolated environment in which applications and their dependencies can live.
+  A container is like a box that creates an isolated environment where applications and their dependencies can live.
 
   # Reason to Use of Docker
   We use Docker for the following key reasons:
@@ -32,13 +32,13 @@
   Docker containers use less memory, Thus, you spend less amount on IT infrastructure.
   
   ### Isolation:
-  Docker containers are isolated from each other and from the host system, which helps prevent conflicts between applications and improves security.
+  Docker containers and the host system are isolated from each other, which helps prevent conflicts between applications and improves security.
   
 ### Rapid Prototyping:
 Docker allows developers to quickly create and test new features or applications without setting up complex environments.
 
 ### Easy Setup: 
-Docker makes setting up applications straightforward. You don’t need to manually install and configure software; everything the app needs is in the container.
+Docker makes setting up applications straightforward. You don’t need to install and configure software manually; everything the app needs is in the container.
 
 # Installation
 ### version
@@ -70,7 +70,7 @@ Paste this command in the terminal to update your system.
 ```
 - sudo: This prefix stands for "superuser do." It allows you to run commands with elevated privileges (as an administrator) that may be required for certain operations, like updating the system.
 
-- apt-get: APT: Stands for Advanced Package Tool, This is a command-line tool for handling packages. It allows you to install, update, and remove software packages on your system.
+- apt-get: APT: Stands for Advanced Package Tool, a command-line tool for handling packages. It allows you to install, update, and remove software packages.
 
 - update: This subcommand tells apt-get to download the latest package lists from the repositories specified in your system's configuration files (typically found in /etc/apt/sources.list)
 #### Step2: Sometimes the curl package is not installed in the system, To install curl use this command: 
@@ -104,7 +104,7 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o 
 - curl -fsSL: This part of the command downloads the Docker GPG key from the specified URL.<br>
 -f(fail): Stops the command if the server returns an error.<br>
 -s(silent): Runs the command quietly without showing the progress bar.<br>
--S(show errors): Ensures that errors are still shown even if -s is used.<br>
+-S(show errors): Ensures errors are still shown even if -s is used.<br>
 -L(follow redirects): Follows any redirects to download the file.<br>
 - |: This is a pipe operator that passes the output of the curl command directly to the next command.
 
@@ -124,7 +124,7 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docke
 - [arch=$(dpkg --print-architecture)]: Includes the system architecture (e.g., amd64).
 - signed-by=/usr/share/keyrings/docker-archive-keyring.gpg: Uses Docker's GPG key for package verification.
 - https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable: URL leads to the specific location where Docker's stable version for your particular Ubuntu version can be downloaded and installed.
-- sudo tee /etc/apt/sources.list.d/docker.list: This information is saved in a new file to be used by the package manager.
+- sudo tee /etc/apt/sources.list.d/docker.List: This information is saved in a new file for the package manager to use.
 -  /dev/null: no output or feedback from the command is displayed to the user.<br>
 
 update the local package index once more.
@@ -411,7 +411,7 @@ There are the following steps to pull the image:
 ## Push image
 There are the following steps to push the image: 
 - Create a docker tag.
-- Login into the docker account via CLI mode.
+- Log into the docker account via CLI mode.
 - Push the image.
   
 Note: you have to make a unique name for the image, same name image is not acceptable.<br>
