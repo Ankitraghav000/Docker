@@ -84,7 +84,7 @@ Paste this command in terminal  to Install the dependency packages.
 ```
 sudo apt install apt-transport-https ca-certificates curl software-properties-common
 ```
-- sudo: Runs the command with superuser (administrator) privileges.
+- sudo: Runs the command with superuser or administrator privileges.
 
 - apt install: Installs the specified packages.
 
@@ -116,7 +116,7 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o 
 - /usr/share/keyrings/: A directory commonly used to store keyrings for authentication.
 - docker-archive-keyring.gpg**: The name of the file where the Docker GPG key is saved in binary format
   
-Next, add the Docker APT repository to your system in the sources.list.d directory.
+Add the Docker APT repository to your system in the sources.list.d directory.
 ```
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 ```
