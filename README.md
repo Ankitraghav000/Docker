@@ -143,9 +143,7 @@ Once you have installed the Docker daemon or service, it should be running. To c
 sudo systemctl status docker
 ```
 ![Screenshot from 2024-08-13 15-45-30(1)](https://github.com/user-attachments/assets/adf0f39e-dbff-432e-b090-ff8abfcf263f)
-![Screenshot from 2024-08-13 15-46-07](https://github.com/user-attachments/assets/927996af-8cc4-4454-afcf-4be471217c8a)
-![Screenshot from 2024-08-13 15-48-33](https://github.com/user-attachments/assets/8ddcfe60-e8ed-4259-a24f-35ad4e805903)
-![Screenshot from 2024-08-13 15-50-26](https://github.com/user-attachments/assets/97c62162-0ab7-4d68-aeac-a8942dddb178)
+
 #### To check whether docker is installed or not
 
 Paste this command in the terminal  to check whether docker is installed or not.
@@ -158,6 +156,7 @@ Paste this command in the terminal to check the Docker version.
 ```
 sudo docker --version
 ```
+![Screenshot from 2024-08-13 15-46-07](https://github.com/user-attachments/assets/927996af-8cc4-4454-afcf-4be471217c8a)
 #### For help in docker
 
 Paste this command in the terminal for docker-related command help.
@@ -401,6 +400,7 @@ Docker Hub is a container registry built for developers and open-source contribu
 
 - visit https://hub.docker.com/ 
 - create an account.
+![Screenshot from 2024-08-13 15-48-33](https://github.com/user-attachments/assets/8ddcfe60-e8ed-4259-a24f-35ad4e805903)
 
 ## Pull image
 There are the following steps to pull the image:
@@ -432,6 +432,8 @@ Paste this command into the terminal to log in via CLI to the docker hub account
 ```
 docker login
 ```
+![Screenshot from 2024-08-13 15-50-26](https://github.com/user-attachments/assets/97c62162-0ab7-4d68-aeac-a8942dddb178)
+
 ### Push the image
 
 Paste this command in the terminal to push the image on the docker hub.
