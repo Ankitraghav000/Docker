@@ -87,12 +87,6 @@ Run this command in the terminal to update your system.
 - update: This subcommand tells apt-get to download the latest package lists from the repositories specified in your system's configuration files (typically found in /etc/apt/sources.list)
 #### Output:
 
-#### Step2: Sometimes the curl package is not installed in the system, To install curl use this command: 
-```
- sudo apt-get install curl
-```
-curl: This is the name of the package you want to install. curl is a command-line tool used to transfer data from a server. It supports various protocols, including HTTP, HTTPS, and FTP.
-#### Output:
 ankit@ankit:~$ sudo apt-get update
 [sudo] password for ankit: 
 Get:1 https://download.docker.com/linux/ubuntu focal InRelease [57.7 kB]                                                                                                                                  
@@ -126,7 +120,23 @@ Fetched 14.1 MB in 6s (2,288 kB/s)
 Reading package lists... Done
 W: An error occurred during the signature verification. The repository is not updated and the previous index files will be used. GPG error: https://download.docker.com/linux/ubuntu focal InRelease: The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 7EA0A9C3F273FCD8
 W: Failed to fetch https://download.docker.com/linux/ubuntu/dists/focal/InRelease  The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 7EA0A9C3F273FCD8
-W: Some index files failed to download. They have been ignored, or old ones used instead.
+W: Some index files failed to download. They have been ignored, or old ones used instead
+
+#### Step2: Sometimes the curl package is not installed in the system, To install curl use this command: 
+```
+ sudo apt-get install curl
+```
+curl: This is the name of the package you want to install. curl is a command-line tool used to transfer data from a server. It supports various protocols, including HTTP, HTTPS, and FTP.
+#### Output:
+ankit@ankit:~$ sudo apt-get install curl
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+curl is already the newest version (7.68.0-1ubuntu2.23).
+The following packages were automatically installed and are no longer required:
+  bridge-utils gir1.2-goa-1.0 ubuntu-fan
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 38 not upgraded.
 #### Step 3. Install the dependency packages to install Docker.
 
 Run this command into the terminal to install the dependency packages.
@@ -145,6 +155,19 @@ sudo apt install apt-transport-https ca-certificates curl software-properties-co
 
 - software-properties-common: Provides tools to manage software repositories, including adding new ones.
 #### Output:
+ankit@ankit:~$ sudo apt install apt-transport-https ca-certificates curl software-properties-common
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+ca-certificates is already the newest version (20230311ubuntu0.20.04.1).
+curl is already the newest version (7.68.0-1ubuntu2.23).
+software-properties-common is already the newest version (0.99.9.12).
+apt-transport-https is already the newest version (2.0.10).
+The following packages were automatically installed and are no longer required:
+  bridge-utils gir1.2-goa-1.0 ubuntu-fan
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 38 not upgraded.
+
 ankit@ankit:~$ sudo apt install apt-transport-https ca-certificates curl software-properties-common
 Reading package lists... Done
 Building dependency tree       
@@ -178,7 +201,8 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o 
 - /usr/share/keyrings/: A directory commonly used to store keyrings for authentication.
 - docker-archive-keyring.gpg**: The name of the file where the Docker GPG key is saved in binary format
  #### Output:
- 
+ ankit@ankit:~$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+ankit@ankit:~$ 
 Add the Docker APT repository to your system in the sources.list.d directory.
 ```
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
