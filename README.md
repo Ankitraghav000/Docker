@@ -745,6 +745,8 @@ Run the IP with port no, and then data will be visible on the webserver.
 ip add:3600
 ```
 #### Output:
+![Screenshot from 2024-08-16 17-50-24](https://github.com/user-attachments/assets/1c1e6926-c7c3-439d-9669-6f9a325abae5)
+
 ## Change container name
 
 Run this command in the terminal to change the container name.
@@ -752,23 +754,42 @@ Run this command in the terminal to change the container name.
 docker container rename id new name
 ```
 #### Output:
+ankit@ankit:~$ docker container rename e2  mycont1
+ankit@ankit:~$ docker container ls
+CONTAINER ID   IMAGE     COMMAND       CREATED          STATUS          PORTS                                   NAMES
+e2798e258743   ubuntu    "/bin/bash"   19 minutes ago   Up 19 minutes   0.0.0.0:3600->80/tcp, :::3600->80/tcp   mycont1
+5a1089d3971e   ubuntu    "/bin/bash"   3 hours ago      Up 3 hours                                              magical_williamson
+
 ## Pause the container
 
 Run this command in the terminal to pause the container.
 ```
 docker container pause id/name
 ```
+#### Output:
+ankit@ankit:~$ docker container ls
+CONTAINER ID   IMAGE     COMMAND       CREATED          STATUS                   PORTS                                   NAMES
+e2798e258743   ubuntu    "/bin/bash"   20 minutes ago   Up 20 minutes (Paused)   0.0.0.0:3600->80/tcp, :::3600->80/tcp   mycont1
+5a1089d3971e   ubuntu    "/bin/bash"   3 hours ago      Up 3 hours                                                       magical_williamson
+ankit@ankit:~$ 
+
 ## Unpause the container
 Run this command in the terminal to unpause the container.
 ```
 docker container unpause id/name
 ```
 #### Output:
+ankit@ankit:~$ docker container unpause e2
+e2
+ankit@ankit:~$ docker container ls
+CONTAINER ID   IMAGE     COMMAND       CREATED          STATUS          PORTS                                   NAMES
+e2798e258743   ubuntu    "/bin/bash"   21 minutes ago   Up 21 minutes   0.0.0.0:3600->80/tcp, :::3600->80/tcp   mycont1
+5a1089d3971e   ubuntu    "/bin/bash"   3 hours ago      Up 3 hours                                              magical_williamson
 # Import the data from the system 
 
 Run this command in the terminal to copy data from the system and paste it into the container's location.
 ```
-docker container cp docker.svg id:/location
+docker container cp filename id:/location
 ```
 #### Output:
 # Docker image
