@@ -606,44 +606,44 @@ docker container inspect id
 ```
 - ip add a mention in the 12th line from the last
 #### Output:
-ankit@ankit:~$ docker container inspect 5a
-[
-    {
-        "Id": "5a1089d3971e782268250234950d1e5f0746ce3c75cf5471fedf05a1d1ead95f",
-        "Created": "2024-08-16T09:51:47.980820976Z",
-.....................
+ankit@ankit:~$ docker container inspect 5a<br>
+[<br>
+    {<br>
+        "Id": "5a1089d3971e782268250234950d1e5f0746ce3c75cf5471fedf05a1d1ead95f",<br>
+        "Created": "2024-08-16T09:51:47.980820976Z",<br>
+.....................<br>
 
- "bridge": {
-                    "IPAMConfig": null,
-                    "Links": null,
-                    "Aliases": null,
-                    "MacAddress": "02:42:ac:11:00:02",
+ "bridge": {<br>
+                    "IPAMConfig": null,<br>
+                    "Links": null,<br>
+                    "Aliases": null,<br>
+                    "MacAddress": "02:42:ac:11:00:02",<br>
                     "DriverOpts": null,
-                    "NetworkID": "f9abe4117bf7811604c3ab76464eff541bc955499e0daf31f26b531ce44d9083",
-                    "EndpointID": "fff411a1618f9accb0f4f3dc99dbd6717860bc4c676ead1bf80758ce57c575dd",
-                    "Gateway": "172.17.0.1",
-                    "IPAddress": "172.17.0.2",
-                    "IPPrefixLen": 16,
-                    "IPv6Gateway": "",
-                    "GlobalIPv6Address": "",
-                    "GlobalIPv6PrefixLen": 0,
-                    "DNSNames": null
-                }
-            }
-        }
-    }
-]
-ankit@ankit:~$ 
-#### Check the output
+                    "NetworkID": "f9abe4117bf7811604c3ab76464eff541bc955499e0daf31f26b531ce44d9083",<br>
+                    "EndpointID": "fff411a1618f9accb0f4f3dc99dbd6717860bc4c676ead1bf80758ce57c575dd",<br>
+                    "Gateway": "172.17.0.1",<br>
+                    "IPAddress": "172.17.0.2",<br>
+                    "IPPrefixLen": 16,<br>
+                    "IPv6Gateway": "",<br>
+                    "GlobalIPv6Address": "",<br>
+                    "GlobalIPv6PrefixLen": 0,<br>
+                    "DNSNames": null<br>
+                }<br>
+            }<br>
+        }<br>
+    }<br>
+]<br>
+ankit@ankit:~$ <br>
+#### Check the output<br>
 
 Run this command in the terminal to check the Apache server output on the terminal.
 ```
 curl IP
 ```
-#### Output:
-ankit@ankit:~$ curl 172.17.0.2
-Welcome to keen&able
-ankit@ankit:~$ 
+#### Output:<br>
+ankit@ankit:~$ curl 172.17.0.2<br>
+Welcome to keen&able<br>
+ankit@ankit:~$ <br>
 #### Check how much space the container has used
 
 Run this command in the terminal with the container ID to check the space used by the container.
@@ -651,8 +651,8 @@ Run this command in the terminal with the container ID to check the space used b
 docker container stats id
 ```
 #### Output:
-CONTAINER ID   NAME                 CPU %     MEM USAGE / LIMIT     MEM %     NET I/O        BLOCK I/O         PIDS
-5a1089d3971e   magical_williamson   0.01%     83.43MiB / 7.541GiB   1.08%     54.6MB / 1MB   35.8MB / 73.5MB   56
+CONTAINER ID   NAME                 CPU %     MEM USAGE / LIMIT     MEM %     NET I/O        BLOCK I/O         PIDS <br>
+5a1089d3971e   magical_williamson   0.01%     83.43MiB / 7.541GiB   1.08%     54.6MB / 1MB   35.8MB / 73.5MB   56 <br>
 
 # Container port mapping
 In Docker, port mapping is the process of making a specific port of a container accessible from the host machine or network. This allows services running inside the container to be accessed externally.
@@ -663,8 +663,8 @@ Run this command in the terminal to create the container with changed port no.
 docker container run -it -p 3600:80 ubuntu /bin/bash
 ```
 #### Output:
-ankit@ankit:~$ docker container run -it -p 3600:80 ubuntu /bin/bash
-root@71a4d536f8c5:/# 
+ankit@ankit:~$ docker container run -it -p 3600:80 ubuntu /bin/bash <br>
+root@71a4d536f8c5:/#  <br>
 #### Update the container
 
 Run this command in the terminal, inside the container, and the container will be updated.
@@ -672,15 +672,15 @@ Run this command in the terminal, inside the container, and the container will b
 apt-get update
 ```
 #### Output:
-root@e2798e258743:/# apt-get install apache2
-Reading package lists... Done
-Building dependency tree... Done
-....................
-.............
-Get:16 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [16.9 kB]                                                                                                                 
-Get:17 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [11.5 kB]                                                                                                                 
-Fetched 24.4 MB in 1min 24s (292 kB/s)                                                                                                                                                                    
-Reading package lists... Done
+root@e2798e258743:/# apt-get install apache2 <br>
+Reading package lists... Done <br>
+Building dependency tree... Done <br>
+.................... <br>
+............. <br>
+Get:16 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [16.9 kB]    <br>                                                                                                              
+Get:17 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [11.5 kB]   <br>                                                                                                               
+Fetched 24.4 MB in 1min 24s (292 kB/s)            <br>                                                                                                                                                         
+Reading package lists... Done <br>
 
 #### Install apache
 
@@ -689,34 +689,34 @@ Run this command in the terminal to install Apache.
 apt-get install apache2
 ```
 #### Output:
-root@e2798e258743:/# apt-get install apache2
-Reading package lists... Done
-Building dependency tree... Done
-Reading state information... Done
-........
-........
-Processing triggers for libc-bin (2.39-0ubuntu8.2) ...
-Processing triggers for ca-certificates (20240203) ...
-Updating certificates in /etc/ssl/certs...
-0 added, 0 removed; done.
-Running hooks in /etc/ca-certificates/update.d...
-done.
-root@e2798e258743:/# 
+root@e2798e258743:/# apt-get install apache2<br>
+Reading package lists... Done<br>
+Building dependency tree... Done<br>
+Reading state information... Done<br>
+........<br>
+........<br>
+Processing triggers for libc-bin (2.39-0ubuntu8.2) ...<br>
+Processing triggers for ca-certificates (20240203) ...<br>
+Updating certificates in /etc/ssl/certs...<br>
+0 added, 0 removed; done.<br>
+Running hooks in /etc/ca-certificates/update.d...<br>
+done.<br>
+root@e2798e258743:/# <br>
 
 ### Now come inside the folder:
 ```
 cd /var/www/html/
 ```
 #### Output:
-root@e2798e258743:/# cd /var/www/html/
-root@e2798e258743:/var/www/html# 
+root@e2798e258743:/# cd /var/www/html/<br>
+root@e2798e258743:/var/www/html# <br>
 ### Add welcome to keen&able.
 ```
 echo "Welcome to keen&able" >index.html
 ```
 #### Output:
-root@e2798e258743:/var/www/html# echo "Welcome to keen&able" >index.html
-root@e2798e258743:/var/www/html# 
+root@e2798e258743:/var/www/html# echo "Welcome to keen&able" >index.html<br>
+root@e2798e258743:/var/www/html# <br>
 
 #### Start the service
 
@@ -725,18 +725,18 @@ Run this command in the terminal to start the service.
 service apache2 start
 ```
 #### Output:
-root@e2798e258743:~# service apache2 start
- * Starting Apache httpd web server apache2                                                                                                                                                                 * 
-root@e2798e258743:~# 
+root@e2798e258743:~# service apache2 start<br>
+ * Starting Apache httpd web server apache2<br>                                                                                                                                                                 * 
+root@e2798e258743:~# <br>
 #### Now check your system ip in another tab
 Run this command in another terminal to check the IP
 ```
 ifconfig
 ```
 #### Output:
-wlo1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
-        inet 192.168.1.29  netmask 255.255.255.0  broadcast 192.168.1.255
-        inet6 fe80::a75e:9d67:4cec:8dd2  prefixlen 64  scopeid 0x20<link>
+wlo1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500<br>
+        inet 192.168.1.29  netmask 255.255.255.0  broadcast 192.168.1.255<br>
+        inet6 fe80::a75e:9d67:4cec:8dd2  prefixlen 64  scopeid 0x20<link><br>
 
 #### Paste this on the web browser
 Run the IP with port no, and then data will be visible on the webserver.
@@ -753,11 +753,11 @@ Run this command in the terminal to change the container name.
 docker container rename id new name
 ```
 #### Output:
-ankit@ankit:~$ docker container rename e2  mycont1
-ankit@ankit:~$ docker container ls
-CONTAINER ID   IMAGE     COMMAND       CREATED          STATUS          PORTS                                   NAMES
-e2798e258743   ubuntu    "/bin/bash"   19 minutes ago   Up 19 minutes   0.0.0.0:3600->80/tcp, :::3600->80/tcp   mycont1
-5a1089d3971e   ubuntu    "/bin/bash"   3 hours ago      Up 3 hours                                              magical_williamson
+ankit@ankit:~$ docker container rename e2  mycont1<br>
+ankit@ankit:~$ docker container ls<br>
+CONTAINER ID   IMAGE     COMMAND       CREATED          STATUS          PORTS                                   NAMES<br>
+e2798e258743   ubuntu    "/bin/bash"   19 minutes ago   Up 19 minutes   0.0.0.0:3600->80/tcp, :::3600->80/tcp   mycont1<br>
+5a1089d3971e   ubuntu    "/bin/bash"   3 hours ago      Up 3 hours                                              magical_williamson<br>
 
 ## Pause the container
 
@@ -766,11 +766,11 @@ Run this command in the terminal to pause the container.
 docker container pause id/name
 ```
 #### Output:
-ankit@ankit:~$ docker container ls
-CONTAINER ID   IMAGE     COMMAND       CREATED          STATUS                   PORTS                                   NAMES
-e2798e258743   ubuntu    "/bin/bash"   20 minutes ago   Up 20 minutes (Paused)   0.0.0.0:3600->80/tcp, :::3600->80/tcp   mycont1
-5a1089d3971e   ubuntu    "/bin/bash"   3 hours ago      Up 3 hours                                                       magical_williamson
-ankit@ankit:~$ 
+ankit@ankit:~$ docker container ls<br>
+CONTAINER ID   IMAGE     COMMAND       CREATED          STATUS                   PORTS                                   NAMES<br>
+e2798e258743   ubuntu    "/bin/bash"   20 minutes ago   Up 20 minutes (Paused)   0.0.0.0:3600->80/tcp, :::3600->80/tcp   mycont1<br>
+5a1089d3971e   ubuntu    "/bin/bash"   3 hours ago      Up 3 hours                                                       magical_williamson<br>
+ankit@ankit:~$ <br>
 
 ## Unpause the container
 Run this command in the terminal to unpause the container.
@@ -778,12 +778,12 @@ Run this command in the terminal to unpause the container.
 docker container unpause id/name
 ```
 #### Output:
-ankit@ankit:~$ docker container unpause e2
-e2
-ankit@ankit:~$ docker container ls
-CONTAINER ID   IMAGE     COMMAND       CREATED          STATUS          PORTS                                   NAMES
-e2798e258743   ubuntu    "/bin/bash"   21 minutes ago   Up 21 minutes   0.0.0.0:3600->80/tcp, :::3600->80/tcp   mycont1
-5a1089d3971e   ubuntu    "/bin/bash"   3 hours ago      Up 3 hours                                              magical_williamson
+ankit@ankit:~$ docker container unpause e2<br>
+e2<br>
+ankit@ankit:~$ docker container ls<br>
+CONTAINER ID   IMAGE     COMMAND       CREATED          STATUS          PORTS                                   NAMES<br>
+e2798e258743   ubuntu    "/bin/bash"   21 minutes ago   Up 21 minutes   0.0.0.0:3600->80/tcp, :::3600->80/tcp   mycont1<br>
+5a1089d3971e   ubuntu    "/bin/bash"   3 hours ago      Up 3 hours                                              magical_williamson<br>
 # Import the data from the system 
 
 Run this command in the terminal to copy data from the system and paste it into the container's location.
@@ -791,8 +791,8 @@ Run this command in the terminal to copy data from the system and paste it into 
 docker container cp file path id:/location
 ```
 #### Output:
-ankit@ankit:~$ docker container cp /home/ankit/Downloads/docker.svg e2:/tmp
-Successfully copied 10.8kB to e2:/tmp
+ankit@ankit:~$ docker container cp /home/ankit/Downloads/docker.svg e2:/tmp<br>
+Successfully copied 10.8kB to e2:/tmp<br>
 
 # Docker image
 Docker images are used to create containers, which are instances of these images running in an isolated environment.
@@ -804,9 +804,9 @@ Run this command in the terminal to export the container data into a file.
 docker container export ID>file name
 ```
 #### Output:
-ankit@ankit:~$ docker container export e2>img1
-ankit@ankit:~$ ls
-Desktop  docimg  docker  Documents  Downloads  img1  Music  pdfstudioviewer2024  Pictures  Public  snap  Templates  Videos
+ankit@ankit:~$ docker container export e2>img1<br>
+ankit@ankit:~$ ls<br>
+Desktop  docimg  docker  Documents  Downloads  img1  Music  pdfstudioviewer2024  Pictures  Public  snap  Templates  Videos<br>
 
 #### Create image
 
@@ -815,17 +815,17 @@ Run this command in the terminal to import and make an image using the container
 docker image import filename image name
 ```
 #### Output:
-ankit@ankit:~$ docker image import img1 image1
-sha256:134d0042461e3963371370388e78d8e2cf03197114a93163326d415bca35c1f0
-ankit@ankit:~$ docker image ls
-REPOSITORY        TAG       IMAGE ID       CREATED          SIZE
-image1            latest    134d0042461e   14 seconds ago   223MB
-ar2002-newimg     latest    4dfd2f22a976   9 days ago       223MB
-newimg            latest    4dfd2f22a976   9 days ago       223MB
-ar2002/webimage   latest    7631888c7972   9 days ago       223MB
-webimage          latest    7631888c7972   9 days ago       223MB
-mysql             latest    7ce93a845a8a   3 weeks ago      586MB
-ubuntu            latest    35a88802559d   2 months ago     78.1MB
+ankit@ankit:~$ docker image import img1 image1<br>
+sha256:134d0042461e3963371370388e78d8e2cf03197114a93163326d415bca35c1f0<br>
+ankit@ankit:~$ docker image ls<br>
+REPOSITORY        TAG       IMAGE ID       CREATED          SIZE<br>
+image1            latest    134d0042461e   14 seconds ago   223MB<br>
+ar2002-newimg     latest    4dfd2f22a976   9 days ago       223MB<br>
+newimg            latest    4dfd2f22a976   9 days ago       223MB<br>
+ar2002/webimage   latest    7631888c7972   9 days ago       223MB<br>
+webimage          latest    7631888c7972   9 days ago       223MB<br>
+mysql             latest    7ce93a845a8a   3 weeks ago      586MB<br>
+ubuntu            latest    35a88802559d   2 months ago     78.1MB<br>
 
 #### Create a container with an image
 Run this command in the terminal to create a container with an image.
@@ -833,8 +833,8 @@ Run this command in the terminal to create a container with an image.
 docker container run -it image name /bin/bash
 ```
 #### Output:
-ankit@ankit:~$ docker container run -it image1 /bin/bash
-root@7ec8f519ba68:/# 
+ankit@ankit:~$ docker container run -it image1 /bin/bash<br>
+root@7ec8f519ba68:/# <br>
 #### Create an image directly
 In the last two commands firstly we have to export the data in a file and then convert it to a docker image.
 Now, we can create images directly 
@@ -842,25 +842,25 @@ Now, we can create images directly
 docker container commit id image name
 ```
 #### Output:
-ankit@ankit:~$ docker container commit 7e img2
-sha256:9c29b70bec1c50b66e75edb7b8ffa4b40edc19038cb82582143c7e9536d25439
+ankit@ankit:~$ docker container commit 7e img2<br>
+sha256:9c29b70bec1c50b66e75edb7b8ffa4b40edc19038cb82582143c7e9536d25439<br>
 #### To check
 Run this command in the terminal to  check the image list.
 ```
 docker image ls
 ```
 #### Output:
-ankit@ankit:~$ docker image ls
-REPOSITORY        TAG       IMAGE ID       CREATED              SIZE
-img2              latest    9c29b70bec1c   About a minute ago   223MB
-image1            latest    134d0042461e   23 minutes ago       223MB
-ar2002-newimg     latest    4dfd2f22a976   9 days ago           223MB
-newimg            latest    4dfd2f22a976   9 days ago           223MB
-ar2002/webimage   latest    7631888c7972   9 days ago           223MB
-webimage          latest    7631888c7972   9 days ago           223MB
-mysql             latest    7ce93a845a8a   3 weeks ago          586MB
-ubuntu            latest    35a88802559d   2 months ago         78.1MB
-ankit@ankit:~$ 
+ankit@ankit:~$ docker image ls<br>
+REPOSITORY        TAG       IMAGE ID       CREATED              SIZE<br>
+img2              latest    9c29b70bec1c   About a minute ago   223MB<br>
+image1            latest    134d0042461e   23 minutes ago       223MB<br>
+ar2002-newimg     latest    4dfd2f22a976   9 days ago           223MB<br>
+newimg            latest    4dfd2f22a976   9 days ago           223MB<br>
+ar2002/webimage   latest    7631888c7972   9 days ago           223MB<br>
+webimage          latest    7631888c7972   9 days ago           223MB<br>
+mysql             latest    7ce93a845a8a   3 weeks ago          586MB<br>
+ubuntu            latest    35a88802559d   2 months ago         78.1MB<br>
+ankit@ankit:~$ <br>
 # Docker hub
 Docker Hub is a container registry built for developers and open-source contributors to find, use, and share their container images.
 ![Docker-hub-registry(1)](https://github.com/user-attachments/assets/57b90ca6-9356-4fe0-a3b2-d4bbaf000bf8)
@@ -879,13 +879,13 @@ There are the following steps to pull the image:
   docker pull mysql
   ```
   #### Output:
-  ankit@ankit:~$ docker pull mysql
-Using default tag: latest
-latest: Pulling from library/mysql
-Digest: sha256:d8df069848906979fd7511db00dc22efeb0a33a990d87c3c6d3fcdafd6fc6123
-Status: Image is up to date for mysql:latest
-docker.io/library/mysql:latest
-ankit@ankit:~$ 
+  ankit@ankit:~$ docker pull mysql<br>
+Using default tag: latest<br>
+latest: Pulling from library/mysql<br>
+Digest: sha256:d8df069848906979fd7511db00dc22efeb0a33a990d87c3c6d3fcdafd6fc6123<br>
+Status: Image is up to date for mysql:latest<br>
+docker.io/library/mysql:latest<br>
+ankit@ankit:~$ <br>
 
 
 ## Push image
@@ -903,7 +903,7 @@ Run this command in the terminal to tag the image.
 docker tag image name username/any name
 ```
 #### Output:
-ankit@ankit:~$ docker tag img2  ar2002/img22
+ankit@ankit:~$ docker tag img2  ar2002/img22<br>
 ### Login via CLI into the docker hub account
 
 Run this command into the terminal to log in via CLI to the docker hub account.
@@ -911,16 +911,16 @@ Run this command into the terminal to log in via CLI to the docker hub account.
 docker login
 ```
 #### Output:
-![Screenshot from 2024-08-13 15-50-26](https://github.com/user-attachments/assets/97c62162-0ab7-4d68-aeac-a8942dddb178)
-ankit@ankit:~$ docker login
-Log in with your Docker ID or email address to push and pull images from Docker Hub. If you don't have a Docker ID, head over to https://hub.docker.com/ to create one.
-You can log in with your password or a Personal Access Token (PAT). Using a limited-scope PAT grants better security and is required for organizations using SSO. Learn more at https://docs.docker.com/go/access-tokens/
+![Screenshot from 2024-08-13 15-50-26](https://github.com/user-attachments/assets/97c62162-0ab7-4d68-aeac-a8942dddb178)<br>
+ankit@ankit:~$ docker login<br>
+Log in with your Docker ID or email address to push and pull images from Docker Hub. If you don't have a Docker ID, head over to https://hub.docker.com/ to create one.<br>
+You can log in with your password or a Personal Access Token (PAT). Using a limited-scope PAT grants better security and is required for organizations using SSO. Learn more at https://docs.docker.com/go/access-tokens/<br>
 
-Username: ar2002
-Password: 
-WARNING! Your password will be stored unencrypted in /home/ankit/.docker/config.json.
-Configure a credential helper to remove this warning. See
-https://docs.docker.com/engine/reference/commandline/login/#credential-stores
+Username: ar2002<br>
+Password: <br>
+WARNING! Your password will be stored unencrypted in /home/ankit/.docker/config.json.<br>
+Configure a credential helper to remove this warning. See<br>
+https://docs.docker.com/engine/reference/commandline/login/#credential-stores<br>
 
 ### Push the image
 
@@ -929,12 +929,12 @@ Run this command in the terminal to push the image on the docker hub.
 docker push username/imagename
 ```
 #### Output:
-ankit@ankit:~$ docker push ar2002/img22
-Using default tag: latest
-The push refers to repository [docker.io/ar2002/img22]
-de4b1ac8264a: Pushed 
-latest: digest: sha256:a96bba9408d9b09e809d9bddecad830a3588be0b6c75b35f6ad1e85e1c0d4d90 size: 529
-ankit@ankit:~$ 
+ankit@ankit:~$ docker push ar2002/img22<br>
+Using default tag: latest<br>
+The push refers to repository [docker.io/ar2002/img22]<br>
+de4b1ac8264a: Pushed <br>
+latest: digest: sha256:a96bba9408d9b09e809d9bddecad830a3588be0b6c75b35f6ad1e85e1c0d4d90 size: 529<br>
+ankit@ankit:~$ <br>
 
 Now, your image will be available on the docker hub all over the world.
 
@@ -946,18 +946,18 @@ Run this command in the terminal for image-related help.
 docker volume --help
 ```
 #### Output:
-ankit@ankit:~$ docker volume --help
-Usage:  docker volume COMMAND
-Manage volumes
+ankit@ankit:~$ docker volume --help<br>
+Usage:  docker volume COMMAND<br>
+Manage volumes<br>
 
-Commands:
-  create      Create a volume
-  inspect     Display detailed information on one or more volumes
-  ls          List volumes
-  prune       Remove unused local volumes
-  rm          Remove one or more volumes
+Commands:<br>
+  create      Create a volume<br>
+  inspect     Display detailed information on one or more volumes<br>
+  ls          List volumes<br>
+  prune       Remove unused local volumes<br>
+  rm          Remove one or more volumes<br>
 
-Run 'docker volume COMMAND --help' for more information on a command.
+Run 'docker volume COMMAND --help' for more information on a command.<br>
 
  ### Create volume
 
@@ -966,8 +966,8 @@ Run this command in the terminal to create volume.
 docker volume create volume name
 ```
 #### Output:
-ankit@ankit:~$ docker volume create vol1
-vol1
+ankit@ankit:~$ docker volume create vol1<br>
+vol1<br>
 ### Check volume
 
 Run this command in the terminal to check volume.
@@ -975,10 +975,10 @@ Run this command in the terminal to check volume.
 docker volume ls
 ```
 #### Output:
-ankit@ankit:~$ docker volume ls
-DRIVER    VOLUME NAME
-local     myvol
-local     vol1
+ankit@ankit:~$ docker volume ls<br>
+DRIVER    VOLUME NAME<br>
+local     myvol<br>
+local     vol1<br>
 
 ### Check volume info
 
@@ -987,18 +987,18 @@ Run this command in the terminal to check the path of volume.
 docker volume inspect volume name
 ```
 #### Output:
-ankit@ankit:~$ docker volume inspect vol1
-[
-    {
-        "CreatedAt": "2024-08-17T12:52:04+05:30",
-        "Driver": "local",
-        "Labels": null,
-       "Mountpoint": "/var/lib/docker/volumes/vol1/_data",
-        "Name": "vol1",
-        "Options": null,
-        "Scope": "local"
-    }
-]
+ankit@ankit:~$ docker volume inspect vol1<br>
+[<br>
+    {<br>
+        "CreatedAt": "2024-08-17T12:52:04+05:30", <br>
+        "Driver": "local", <br>
+        "Labels": null,<br>
+       "Mountpoint": "/var/lib/docker/volumes/vol1/_data",<br>
+        "Name": "vol1",<br>
+        "Options": null,<br>
+        "Scope": "local"<br>
+    }<br>
+]<br>
 ### Copy the path and paste it into the terminal 
 
 Run this command in the terminal to come inside the volume.
@@ -1006,11 +1006,11 @@ Run this command in the terminal to come inside the volume.
 cd /var/lib/docker/volumes/myvol/_data
 ```
 #### Output:
-ankit@ankit:~$ su
-Password: 
-root@ankit:/home/ankit# cd
-root@ankit:~# cd /var/lib/docker/volumes/vol1/_data
-root@ankit:/var/lib/docker/volumes/vol1/_data#
+ankit@ankit:~$ su<br>
+Password: <br>
+root@ankit:/home/ankit# cd<br>
+root@ankit:~# cd /var/lib/docker/volumes/vol1/_data<br>
+root@ankit:/var/lib/docker/volumes/vol1/_data#<br>
 ### Create some file
 
 Run this command in the terminal to create some files inside the terminal.
@@ -1018,10 +1018,10 @@ Run this command in the terminal to create some files inside the terminal.
 touch abc{1..10}
 ```
 #### Output:
-root@ankit:/var/lib/docker/volumes/vol1/_data# touch abc{1..10}
-root@ankit:/var/lib/docker/volumes/vol1/_data# ls
-abc1  abc10  abc2  abc3  abc4  abc5  abc6  abc7  abc8  abc9
-root@ankit:/var/lib/docker/volumes/vol1/_data#
+root@ankit:/var/lib/docker/volumes/vol1/_data# touch abc{1..10}<br>
+root@ankit:/var/lib/docker/volumes/vol1/_data# ls<br>
+abc1  abc10  abc2  abc3  abc4  abc5  abc6  abc7  abc8  abc9<br>
+root@ankit:/var/lib/docker/volumes/vol1/_data#<br>
 ### Create a container with an attached volume
 
 Run this command in the terminal to create  the container with the attached volume.
@@ -1030,13 +1030,13 @@ docker container run -it -v vol name:/tmp --name xyz ubuntu /bin/bash
 ```
 - -v stands for volume
 - #### Output:
-root@ankit:~# docker container run -it -v vol1:/tmp --name cont1 ubuntu /bin/bash
-root@402ceb2b8ea5:/# root@ankit:~# docker container ls
-CONTAINER ID   IMAGE     COMMAND       CREATED          STATUS          PORTS                                   NAMES
-402ceb2b8ea5   ubuntu    "/bin/bash"   26 seconds ago   Up 24 seconds                                           cont1
-7ec8f519ba68   image1    "/bin/bash"   4 hours ago      Up 4 hours                                              nifty_murdock
-e2798e258743   ubuntu    "/bin/bash"   23 hours ago     Up 6 hours      0.0.0.0:3600->80/tcp, :::3600->80/tcp   mycont1
-root@ankit:~# 
+root@ankit:~# docker container run -it -v vol1:/tmp --name cont1 ubuntu /bin/bash<br>
+root@402ceb2b8ea5:/# root@ankit:~# docker container ls<br>
+CONTAINER ID   IMAGE     COMMAND       CREATED          STATUS          PORTS                                   NAMES<br>
+402ceb2b8ea5   ubuntu    "/bin/bash"   26 seconds ago   Up 24 seconds                                           cont1<br>
+7ec8f519ba68   image1    "/bin/bash"   4 hours ago      Up 4 hours                                              nifty_murdock<br>
+e2798e258743   ubuntu    "/bin/bash"   23 hours ago     Up 6 hours      0.0.0.0:3600->80/tcp, :::3600->80/tcp   mycont1<br>
+root@ankit:~# <br>
 ### Check whether volume data is available or not
 
 Run this command in the terminal to check the volume data that we have attached. 
@@ -1044,10 +1044,10 @@ Run this command in the terminal to check the volume data that we have attached.
 cd /tmp
 ```
 #### Output:
-root@402ceb2b8ea5:~# cd /tmp 
-root@402ceb2b8ea5:/tmp# ls
-abc1  abc10  abc2  abc3  abc4  abc5  abc6  abc7  abc8  abc9
-root@402ceb2b8ea5:/tmp# 
+root@402ceb2b8ea5:~# cd /tmp<br> 
+root@402ceb2b8ea5:/tmp# ls<br>
+abc1  abc10  abc2  abc3  abc4  abc5  abc6  abc7  abc8  abc9<br>
+root@402ceb2b8ea5:/tmp# <br>
 # Docker swarm
 Docker Swarm is a tool that allows you to manage workers as an individual manager.
 Managers can manage containers, images, and volume at the worker's node.
