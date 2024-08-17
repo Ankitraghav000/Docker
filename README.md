@@ -213,7 +213,7 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docke
 - sudo tee /etc/apt/sources.list.d/docker.List: This information is saved in a new file for the package manager to use.<br>
 -  /dev/null: no output or feedback from the command is displayed to the user.<br>
 #### Output:
-ankit@ankit:~$ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null<br>
+ankit@ankit:~ $ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null<br>
 [sudo] password for ankit: <br>
 
 update the local package index once more.
