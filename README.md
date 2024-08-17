@@ -127,15 +127,15 @@ W: Some index files failed to download. They have been ignored, or old ones used
 ```
 curl: This is the name of the package you want to install. curl is a command-line tool used to transfer data from a server. It supports various protocols, including HTTP, HTTPS, and FTP.
 #### Output:
-ankit@ankit:~$ sudo apt-get install curl
-Reading package lists... Done
-Building dependency tree       
-Reading state information... Done
-curl is already the newest version (7.68.0-1ubuntu2.23).
-The following packages were automatically installed and are no longer required:
-  bridge-utils gir1.2-goa-1.0 ubuntu-fan
-Use 'sudo apt autoremove' to remove them.
-0 upgraded, 0 newly installed, 0 to remove and 38 not upgraded.
+ankit@ankit:~$ sudo apt-get install curl<br>
+Reading package lists... Done<br>
+Building dependency tree<br>       
+Reading state information... Done<br>
+curl is already the newest version (7.68.0-1ubuntu2.23).<br>
+The following packages were automatically installed and are no longer required:<br>
+  bridge-utils gir1.2-goa-1.0 ubuntu-fan<br>
+Use 'sudo apt autoremove' to remove them.<br>
+0 upgraded, 0 newly installed, 0 to remove and 38 not upgraded.<br>
 #### Step 3. Install the dependency packages to install Docker.
 
 Run this command into the terminal to install the dependency packages.
@@ -154,31 +154,31 @@ sudo apt install apt-transport-https ca-certificates curl software-properties-co
 
 - software-properties-common: Provides tools to manage software repositories, including adding new ones.
 #### Output:
-ankit@ankit:~$ sudo apt install apt-transport-https ca-certificates curl software-properties-common
-Reading package lists... Done
-Building dependency tree       
-Reading state information... Done
-ca-certificates is already the newest version (20230311ubuntu0.20.04.1).
-curl is already the newest version (7.68.0-1ubuntu2.23).
-software-properties-common is already the newest version (0.99.9.12).
-apt-transport-https is already the newest version (2.0.10).
-The following packages were automatically installed and are no longer required:
-  bridge-utils gir1.2-goa-1.0 ubuntu-fan
-Use 'sudo apt autoremove' to remove them.
-0 upgraded, 0 newly installed, 0 to remove and 38 not upgraded.
+ankit@ankit:~$ sudo apt install apt-transport-https ca-certificates curl software-properties-common<br>
+Reading package lists... Done<br>
+Building dependency tree <br>      
+Reading state information... Done<br>
+ca-certificates is already the newest version (20230311ubuntu0.20.04.1).<br>
+curl is already the newest version (7.68.0-1ubuntu2.23).<br>
+software-properties-common is already the newest version (0.99.9.12).<br>
+apt-transport-https is already the newest version (2.0.10).<br>
+The following packages were automatically installed and are no longer required:<br>
+  bridge-utils gir1.2-goa-1.0 ubuntu-fan<br>
+Use 'sudo apt autoremove' to remove them.<br>
+0 upgraded, 0 newly installed, 0 to remove and 38 not upgraded.<br>
 
 ankit@ankit:~$ sudo apt install apt-transport-https ca-certificates curl software-properties-common
-Reading package lists... Done
-Building dependency tree       
-Reading state information... Done
-ca-certificates is already the newest version (20230311ubuntu0.20.04.1).
-curl is already the newest version (7.68.0-1ubuntu2.23).
-software-properties-common is already the newest version (0.99.9.12).
-apt-transport-https is already the newest version (2.0.10).
-The following packages were automatically installed and are no longer required:
-  bridge-utils gir1.2-goa-1.0 ubuntu-fan
-Use 'sudo apt autoremove' to remove them.
-0 upgraded, 0 newly installed, 0 to remove and 38 not upgraded.
+Reading package lists... Done<br>
+Building dependency tree<br>       
+Reading state information... Done<br>
+ca-certificates is already the newest version (20230311ubuntu0.20.04.1).<br>
+curl is already the newest version (7.68.0-1ubuntu2.23).<br>
+software-properties-common is already the newest version (0.99.9.12).<br>
+apt-transport-https is already the newest version (2.0.10).<br>
+The following packages were automatically installed and are no longer required:<br>
+  bridge-utils gir1.2-goa-1.0 ubuntu-fan<br>
+Use 'sudo apt autoremove' to remove them.<br>
+0 upgraded, 0 newly installed, 0 to remove and 38 not upgraded.<br>
 #### Step 4. Install Docker
 
 Run this command in the terminal  to install docker.
@@ -190,53 +190,53 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o 
 -s(silent): Runs the command quietly without showing the progress bar.<br>
 -S(show errors): Ensures errors are still shown even if -s is used.<br>
 -L(follow redirects): Follows any redirects to download the file.<br>
-- |: This is a pipe operator that passes the output of the curl command directly to the next command.
+- |: This is a pipe operator that passes the output of the curl command directly to the next command.<br>
 
-- sudo gpg --dearmor: This command converts the downloaded GPG key from ASCII (armored format) to binary format.
-- gpg: Stands for GNU Privacy Guard, a tool for secure communication and data storage.
-- --dearmor: Converts the key from its armored (text) format to a binary format.
+- sudo gpg --dearmor: This command converts the downloaded GPG key from ASCII (armored format) to binary format.<br>
+- gpg: Stands for GNU Privacy Guard, a tool for secure communication and data storage.<br>
+- --dearmor: Converts the key from its armored (text) format to a binary format.<br>
 
-- -o /usr/share/keyrings/docker-archive-keyring.gpg: This specifies the output file where the binary GPG key will be stored.
-- /usr/share/keyrings/: A directory commonly used to store keyrings for authentication.
-- docker-archive-keyring.gpg**: The name of the file where the Docker GPG key is saved in binary format
+- -o /usr/share/keyrings/docker-archive-keyring.gpg: This specifies the output file where the binary GPG key will be stored.<br>
+- /usr/share/keyrings/: A directory commonly used to store keyrings for authentication.<br>
+- docker-archive-keyring.gpg**: The name of the file where the Docker GPG key is saved in binary format<br>
  #### Output:
- ankit@ankit:~$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
-ankit@ankit:~$ 
-Add the Docker APT repository to your system in the sources.list.d directory.
+ ankit@ankit:~$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg<br>
+ankit@ankit:~$ <br>
+Add the Docker APT repository to your system in the sources.list.d directory.<br>
 ```
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 ```
-- deb: Specifies a Debian package repository.
-- [arch=$(dpkg --print-architecture)]: Includes the system architecture (e.g., amd64).
-- signed-by=/usr/share/keyrings/docker-archive-keyring.gpg: Uses Docker's GPG key for package verification.
-- https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable: URL leads to the specific location where Docker's stable version for your particular Ubuntu version can be downloaded and installed.
-- sudo tee /etc/apt/sources.list.d/docker.List: This information is saved in a new file for the package manager to use.
+- deb: Specifies a Debian package repository.<br>
+- [arch=$(dpkg --print-architecture)]: Includes the system architecture (e.g., amd64).<br>
+- signed-by=/usr/share/keyrings/docker-archive-keyring.gpg: Uses Docker's GPG key for package verification.<br>
+- https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable: URL leads to the specific location where Docker's stable version for your particular Ubuntu version can be downloaded and installed.<br>
+- sudo tee /etc/apt/sources.list.d/docker.List: This information is saved in a new file for the package manager to use.<br>
 -  /dev/null: no output or feedback from the command is displayed to the user.<br>
 #### Output:
-ankit@ankit:~$ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-[sudo] password for ankit: 
+ankit@ankit:~$ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null<br>
+[sudo] password for ankit: <br>
 
 update the local package index once more.
 ```
 sudo apt update
 ```
 #### Output:
-ankit@ankit:~$ sudo apt update
-Get:1 https://download.docker.com/linux/ubuntu focal InRelease [57.7 kB]
-Get:2 https://packages.microsoft.com/repos/code stable InRelease [3,590 B]                                                                                                                     
-Get:3 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages [48.8 kB]                   
-Hit:4 http://in.archive.ubuntu.com/ubuntu focal InRelease            
-Hit:5 http://security.ubuntu.com/ubuntu focal-security InRelease
-Get:6 http://in.archive.ubuntu.com/ubuntu focal-updates InRelease [128 kB]
-Get:7 https://packages.microsoft.com/repos/code stable/main armhf Packages [18.1 kB]
-Get:8 https://packages.microsoft.com/repos/code stable/main arm64 Packages [18.1 kB]
-Get:9 https://packages.microsoft.com/repos/code stable/main amd64 Packages [17.9 kB]
-Hit:10 http://in.archive.ubuntu.com/ubuntu focal-backports InRelease
-Fetched 292 kB in 2s (164 kB/s)
-Reading package lists... Done
-Building dependency tree       
-Reading state information... Done
-43 packages can be upgraded. Run 'apt list --upgradable' to see them.
+ankit@ankit:~$ sudo apt update<br>
+Get:1 https://download.docker.com/linux/ubuntu focal InRelease [57.7 kB]<br>
+Get:2 https://packages.microsoft.com/repos/code stable InRelease [3,590 B]  <br>                                                                                                                   
+Get:3 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages [48.8 kB] <br>                  
+Hit:4 http://in.archive.ubuntu.com/ubuntu focal InRelease     <br>       
+Hit:5 http://security.ubuntu.com/ubuntu focal-security InRelease<br>
+Get:6 http://in.archive.ubuntu.com/ubuntu focal-updates InRelease [128 kB]<br>
+Get:7 https://packages.microsoft.com/repos/code stable/main armhf Packages [18.1 kB]<br>
+Get:8 https://packages.microsoft.com/repos/code stable/main arm64 Packages [18.1 kB]<br>
+Get:9 https://packages.microsoft.com/repos/code stable/main amd64 Packages [17.9 kB]<br>
+Hit:10 http://in.archive.ubuntu.com/ubuntu focal-backports InRelease<br>
+Fetched 292 kB in 2s (164 kB/s)<br>
+Reading package lists... Done<br>
+Building dependency tree      <br> 
+Reading state information... Done<br>
+43 packages can be upgraded. Run 'apt list --upgradable' to see them.<br>
 
 
 Now, install Docker Community Edition:
@@ -245,46 +245,46 @@ sudo apt install docker-ce -y
 ```
 docker-ce: Specifies the package name for Docker Community Edition, which is the free, open-source version of Docker.<br>
 
--y: Automatically answers "yes" to any prompts that may appear during the installation process.<be>
+-y: Automatically answers "yes" to any prompts that may appear during the installation process.<br>
 #### Output:
-ankit@ankit:~$ sudo apt install docker-ce -y
-Reading package lists... Done
-Building dependency tree       
-Reading state information... Done
-The following packages were automatically installed and are no longer required:
-  bridge-utils gir1.2-goa-1.0 ubuntu-fan
-Use 'sudo apt autoremove' to remove them.
-Suggested packages:
-  aufs-tools cgroupfs-mount | cgroup-lite
-The following packages will be upgraded:
-  docker-ce
-1 upgraded, 0 newly installed, 0 to remove and 42 not upgraded.
-Need to get 25.3 MB of archives.
-After this operation, 9,216 B of additional disk space will be used.
+ankit@ankit:~$ sudo apt install docker-ce -y<br>
+Reading package lists... Done<br>
+Building dependency tree    <br>   
+Reading state information... Done<br>
+The following packages were automatically installed and are no longer required:<br>
+  bridge-utils gir1.2-goa-1.0 ubuntu-fan<br>
+Use 'sudo apt autoremove' to remove them.<br>
+Suggested packages:<br>
+  aufs-tools cgroupfs-mount | cgroup-lite<br>
+The following packages will be upgraded:<br>
+  docker-ce<br>
+1 upgraded, 0 newly installed, 0 to remove and 42 not upgraded.<br>
+Need to get 25.3 MB of archives.<br>
+After this operation, 9,216 B of additional disk space will be used.<br>
 Get:1 https://download.docker.com/linux/ubuntu focal/stable amd64 docker-ce amd64 5:27.1.2-1~ubuntu.20.04~focal [25.3 MB]
-Fetched 25.3 MB in 8s (3,120 kB/s)                                                                                                                                                                        
-(Reading database ... 185972 files and directories currently installed.)
-Preparing to unpack .../docker-ce_5%3a27.1.2-1~ubuntu.20.04~focal_amd64.deb ...
-Unpacking docker-ce (5:27.1.2-1~ubuntu.20.04~focal) over (5:27.1.1-1~ubuntu.20.04~focal) ...
-Setting up docker-ce (5:27.1.2-1~ubuntu.20.04~focal) ...
-Processing triggers for systemd (245.4-4ubuntu3.23) ...
+Fetched 25.3 MB in 8s (3,120 kB/s)<br>                                                                                                                                                                        
+(Reading database ... 185972 files and directories currently installed.)<br>
+Preparing to unpack .../docker-ce_5%3a27.1.2-1~ubuntu.20.04~focal_amd64.deb ...<br>
+Unpacking docker-ce (5:27.1.2-1~ubuntu.20.04~focal) over (5:27.1.1-1~ubuntu.20.04~focal) ...<br>
+Setting up docker-ce (5:27.1.2-1~ubuntu.20.04~focal) ...<br>
+Processing triggers for systemd (245.4-4ubuntu3.23) ...<br>
 
 Once you have installed the Docker daemon or service, it should be running. To confirm this, run the command:
 ```
 sudo systemctl status docker
 ```
 #### Output:
-ankit@ankit:~$ sudo systemctl status docker
-● docker.service - Docker Application Container Engine
-     Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: enabled)
-     Active: active (running) since Fri 2024-08-16 14:51:04 IST; 53s ago
-TriggeredBy: ● docker.socket
-       Docs: https://docs.docker.com
-   Main PID: 5598 (dockerd)
-      Tasks: 10
-     Memory: 20.6M
-     CGroup: /system.slice/docker.service
-             └─5598 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+ankit@ankit:~$ sudo systemctl status docker<br>
+● docker.service - Docker Application Container Engine<br>
+     Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: enabled)<br>
+     Active: active (running) since Fri 2024-08-16 14:51:04 IST; 53s ago<br>
+TriggeredBy: ● docker.socket<br>
+       Docs: https://docs.docker.com<br>
+   Main PID: 5598 (dockerd)<br>
+      Tasks: 10<br>
+     Memory: 20.6M<br>
+     CGroup: /system.slice/docker.service<br>
+             └─5598 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock<br>
 
 #### To check whether docker is installed or not
 
@@ -293,22 +293,22 @@ Run this command in the terminal  to check whether docker is installed or not.
 docker info
 ```
 #### Output:
-ankit@ankit:~$ docker info
-Client: Docker Engine - Community
- Version:    27.1.1
- Context:    default
- Debug Mode: false
- Plugins:
-  buildx: Docker Buildx (Docker Inc.)
-    Version:  v0.16.1
-    Path:     /usr/libexec/docker/cli-plugins/docker-buildx
-  compose: Docker Compose (Docker Inc.)
-    Version:  v2.29.1
-    Path:     /usr/libexec/docker/cli-plugins/docker-compose......
-    ........................................
-    Insecure Registries:
-  127.0.0.0/8
- Live Restore Enabled: false
+ankit@ankit:~$ docker info<br>
+Client: Docker Engine - Community<br>
+ Version:    27.1.1<br>
+ Context:    default<br>
+ Debug Mode: false<br>
+ Plugins:<br>
+  buildx: Docker Buildx (Docker Inc.)<br>
+    Version:  v0.16.1<br>
+    Path:     /usr/libexec/docker/cli-plugins/docker-buildx<br>
+  compose: Docker Compose (Docker Inc.)<br>
+    Version:  v2.29.1<br>
+    Path:     /usr/libexec/docker/cli-plugins/docker-compose......<br>
+    ........................................<br>
+    Insecure Registries:<br>
+  127.0.0.0/8<br>
+ Live Restore Enabled: false<br>
 
 #### Check the version of Docker :
 
@@ -317,46 +317,46 @@ Run this command in the terminal to check the Docker version.
 sudo docker --version
 ```
 #### Output:
-ankit@ankit:~$ sudo docker --version
-Docker version 27.1.1, build 6312585
+ankit@ankit:~$ sudo docker --version<br>
+Docker version 27.1.1, build 6312585<br>
 
 #### For help in docker
 
-Run this command in the terminal for docker-related command help.
+Run this command in the terminal for docker-related command help.<br>
 ```
 docker --help
 ```
 #### Output:
 docker --help
+<br>
+Usage:  docker [OPTIONS] COMMAND<br>
 
-Usage:  docker [OPTIONS] COMMAND
+A self-sufficient runtime for containers<br>
 
-A self-sufficient runtime for containers
+Common Commands:<br>
+  run         Create and run a new container from an image<br>
+  exec        Execute a command in a running container<br>
+  ps          List containers<br>
+  build       Build an image from a Dockerfile<br>
+  pull        Download an image from a registry<br>
+  push        Upload an image to a registry<br>
+..........................<br>
+Global Options:<br>
+      --config string      Location of client config files (default "/home/ankit/.docker")<br>
+  -c, --context string     Name of the context to use to connect to the daemon (overrides DOCKER_HOST env var and default context set with "docker context use")<br>
+  -D, --debug              Enable debug mode<br>
+  -H, --host list          Daemon socket to connect to<br>
+  -l, --log-level string   Set the logging level ("debug", "info", "warn", "error", "fatal") (default "info")<br>
+      --tls                Use TLS; implied by --tlsverify<br>
+      --tlscacert string   Trust certs signed only by this CA (default "/home/ankit/.docker/ca.pem")<br>
+      --tlscert string     Path to TLS certificate file (default "/home/ankit/.docker/cert.pem")<br>
+      --tlskey string      Path to TLS key file (default "/home/ankit/.docker/key.pem")<br>
+      --tlsverify          Use TLS and verify the remote<br>
+  -v, --version            Print version information and quit<br>
 
-Common Commands:
-  run         Create and run a new container from an image
-  exec        Execute a command in a running container
-  ps          List containers
-  build       Build an image from a Dockerfile
-  pull        Download an image from a registry
-  push        Upload an image to a registry
-..........................
-Global Options:
-      --config string      Location of client config files (default "/home/ankit/.docker")
-  -c, --context string     Name of the context to use to connect to the daemon (overrides DOCKER_HOST env var and default context set with "docker context use")
-  -D, --debug              Enable debug mode
-  -H, --host list          Daemon socket to connect to
-  -l, --log-level string   Set the logging level ("debug", "info", "warn", "error", "fatal") (default "info")
-      --tls                Use TLS; implied by --tlsverify
-      --tlscacert string   Trust certs signed only by this CA (default "/home/ankit/.docker/ca.pem")
-      --tlscert string     Path to TLS certificate file (default "/home/ankit/.docker/cert.pem")
-      --tlskey string      Path to TLS key file (default "/home/ankit/.docker/key.pem")
-      --tlsverify          Use TLS and verify the remote
-  -v, --version            Print version information and quit
+Run 'docker COMMAND --help' for more information on a command.<br>
 
-Run 'docker COMMAND --help' for more information on a command.
-
-For more help on how to use Docker, head to https://docs.docker.com/go/guides/
+For more help on how to use Docker, head to https://docs.docker.com/go/guides/<br>
 
 # Container
 
@@ -367,7 +367,7 @@ Run this command in the terminal to check the containers list.
 docker container ls
 ```
 #### Output:ankit@ankit:~$ docker container ls
-CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES<br>
 
 #### How to make a container
 When we run the command on the terminal it will extract data from this website - https://hub.docker.com/
@@ -376,8 +376,8 @@ Here, ubuntu is the OS name.
 docker container run ubuntu
 ```
 #### Output:
-ankit@ankit:~$ docker container run ubuntu
-ankit@ankit:~$ 
+ankit@ankit:~$ docker container run ubuntu<br>
+ankit@ankit:~$ <br>
 
 #### Run container in the background only for 60 sec
 
@@ -388,30 +388,30 @@ docker container run -d ubuntu sleep 60
 - -d Stands for Detached mode.
 - Purpose: Runs the container in the background.
 #### Output:
-ankit@ankit:~$ docker container run -d ubuntu sleep 60
-03fb03684da827318d1aa60b088614dcf6f192df9d27aa4ac255f1ed2bd5fb02
+ankit@ankit:~$ docker container run -d ubuntu sleep 60<br>
+03fb03684da827318d1aa60b088614dcf6f192df9d27aa4ac255f1ed2bd5fb02<br>
 #### Make a running container 
 
 Run this command in the terminal to create a running container.
 ```
 docker container run -d -it ubuntu
 ```
-- -it Stands for Interactive 
-- Purpose: Allows you to interact with the container.
+- -it Stands for Interactive <br>
+- Purpose: Allows you to interact with the container.<br>
 #### Output:
-ankit@ankit:~$ docker container run -d -it ubuntu
-e6bf00e259ee149aa9e5222fccc9f39e9a4db1fcf42be3c588fe772594f048f1
+ankit@ankit:~$ docker container run -d -it ubuntu<br>
+e6bf00e259ee149aa9e5222fccc9f39e9a4db1fcf42be3c588fe772594f048f1<br>
 #### See all container
 Run this command in the terminal to check the running and stopped container list.
 ```
 docker container ls -a
 ```
 #### Output:
-ankit@ankit:~$ docker container ls -a
-CONTAINER ID   IMAGE     COMMAND       CREATED         STATUS                     PORTS     NAMES
-e6bf00e259ee   ubuntu    "/bin/bash"   2 minutes ago   Up 2 minutes                         lucid_neumann
-03fb03684da8   ubuntu    "sleep 60"    3 minutes ago   Exited (0) 2 minutes ago             agitated_jang
-3f4680f900ae   ubuntu    "/bin/bash"   5 minutes ago   Exited (0) 5 minutes ago             trusting_bartik
+ankit@ankit:~$ docker container ls -a<br>
+CONTAINER ID   IMAGE     COMMAND       CREATED         STATUS                     PORTS     NAMES<br>
+e6bf00e259ee   ubuntu    "/bin/bash"   2 minutes ago   Up 2 minutes                         lucid_neumann<br>
+03fb03684da8   ubuntu    "sleep 60"    3 minutes ago   Exited (0) 2 minutes ago             agitated_jang<br>
+3f4680f900ae   ubuntu    "/bin/bash"   5 minutes ago   Exited (0) 5 minutes ago             trusting_bartik<br>
 
 #### Stop the container 
 
@@ -420,23 +420,23 @@ Run this command in the terminal with your container ID and it will stop.
 docker container stop container id
 ```
 #### Output:
-ankit@ankit:~$ docker container ls -a
-CONTAINER ID   IMAGE     COMMAND       CREATED         STATUS                        PORTS     NAMES
-e6bf00e259ee   ubuntu    "/bin/bash"   5 minutes ago   Exited (137) 22 seconds ago             lucid_neumann
-03fb03684da8   ubuntu    "sleep 60"    5 minutes ago   Exited (0) 4 minutes ago                agitated_jang
-3f4680f900ae   ubuntu    "/bin/bash"   7 minutes ago   Exited (0) 7 minutes ago                trusting_bartik
-57eb84a45887   ubuntu    "/bin/bash"   8 days ago      Exited (137) 8 days ago                 myvolcontainer1
-ankit@ankit:~$ docker container stop e6bf00e259ee
-e6bf00e259ee
-ankit@ankit:~$ docker container stop 03
-03
-ankit@ankit:~$ docker container stop 3
-3
-ankit@ankit:~$ docker container stop myvol
-Error response from daemon: No such container: myvol
-ankit@ankit:~$ docker container stop myvolcontainer1
-myvolcontainer1
-ankit@ankit:~$ 
+ankit@ankit:~$ docker container ls -a<br>
+CONTAINER ID   IMAGE     COMMAND       CREATED         STATUS                        PORTS     NAMES<br>
+e6bf00e259ee   ubuntu    "/bin/bash"   5 minutes ago   Exited (137) 22 seconds ago             lucid_neumann<br>
+03fb03684da8   ubuntu    "sleep 60"    5 minutes ago   Exited (0) 4 minutes ago                agitated_jang<br>
+3f4680f900ae   ubuntu    "/bin/bash"   7 minutes ago   Exited (0) 7 minutes ago                trusting_bartik<br>
+57eb84a45887   ubuntu    "/bin/bash"   8 days ago      Exited (137) 8 days ago                 myvolcontainer1<br>
+ankit@ankit:~$ docker container stop e6bf00e259ee<br>
+e6bf00e259ee<br>
+ankit@ankit:~$ docker container stop 03<br>
+03<br>
+ankit@ankit:~$ docker container stop 3<br>
+3<br>
+ankit@ankit:~$ docker container stop myvol<br>
+Error response from daemon: No such container: myvol<br>
+ankit@ankit:~$ docker container stop myvolcontainer1<br>
+myvolcontainer1<br>
+ankit@ankit:~$ <br>
 
 #### Start the container
 
@@ -445,10 +445,10 @@ Run this command in the terminal with your container ID and it will start.
 docker container start container id
 ```
 #### Output:
-ankit@ankit:~$ docker container start 57
-57
-ankit@ankit:~$ docker container start e6
-e6
+ankit@ankit:~$ docker container start 57<br>
+57<br>
+ankit@ankit:~$ docker container start e6<br>
+e6<br>
 
 #### Restart the container
 
@@ -457,10 +457,10 @@ Run this command in the terminal with your container ID and the running containe
 docker container restart container id
 ```
 #### Output:
-ankit@ankit:~$ docker container start e6
-e6
-ankit@ankit:~$ docker container restart e6
-e6
+ankit@ankit:~$ docker container start e6<br>
+e6<br>
+ankit@ankit:~$ docker container restart e6<br>
+e6<br>
 #### Delete a stopped container
 
 Run this command in the terminal with your container ID and it will deleted or removed.
@@ -468,21 +468,21 @@ Run this command in the terminal with your container ID and it will deleted or r
 docker container rm container id
 ```
 #### Output:
-ankit@ankit:~$ docker container rm 03
-03
-ankit@ankit:~$ 
+ankit@ankit:~$ docker container rm 03<br>
+03<br>
+ankit@ankit:~$ <br>
 #### Delete a running container
 Run this command in the terminal with your container ID and your running container will be deleted forcefully (-f).
 ```
 docker container rm container id -f
 ```
 #### Output:
-ankit@ankit:~$ docker container rm container 3f -f
-Error response from daemon: No such container: container
-3f
-ankit@ankit:~$ docker container ls -a
-CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
-ankit@ankit:~$ 
+ankit@ankit:~$ docker container rm container 3f -f<br>
+Error response from daemon: No such container: container<br>
+3f<br>
+ankit@ankit:~$ docker container ls -a<br>
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES<br>
+ankit@ankit:~$ <br>
 
 # Apache server 
 Apache is a web server tool that accepts visitors' HTTP requests and sends them back the requested information in the form of web pages.
@@ -494,8 +494,8 @@ Run this command in the terminal, and you will come inside the new container.
 docker container run -it ubuntu /bin/bash
 ```
 #### Output:
-ankit@ankit:~$ docker container run -it ubuntu /bin/bash
-root@5a1089d3971e:/# 
+ankit@ankit:~$ docker container run -it ubuntu /bin/bash<br>
+root@5a1089d3971e:/# <br>
 #### Exit from the container
 
 Press this command in the terminal and you will exit from the container.
@@ -506,8 +506,8 @@ ctrl+p
 ctrl+q
 ```
 #### Output:
-ankit@ankit:~$ docker container run -it ubuntu /bin/bash
-root@5a1089d3971e:/# ankit@ankit:~$ 
+ankit@ankit:~$ docker container run -it ubuntu /bin/bash<br>
+root@5a1089d3971e:/# ankit@ankit:~$ <br>
 
 #### Come inside the container
 
@@ -516,8 +516,8 @@ Run this command in the terminal, and you will come inside the container.
 docker container attach id
 ```
 #### Output:
-ankit@ankit:~$ docker container attach 5a
-root@5a1089d3971e:/# 
+ankit@ankit:~$ docker container attach 5a<br>
+root@5a1089d3971e:/# <br>
 #### Update the container
 
 Run this command in the terminal, inside the container, and the container will be updated.
@@ -525,28 +525,28 @@ Run this command in the terminal, inside the container, and the container will b
 apt-get update
 ```
 #### Output:
-ankit@ankit:~$ docker container attach 5a
-root@5a1089d3971e:/# apt-get update
-Get:1 http://archive.ubuntu.com/ubuntu noble InRelease [256 kB]
-Get:2 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
-Get:3 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [12.7 kB]
-Get:4 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
-Get:5 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [309 kB]
-Get:6 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
-Get:7 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB]
-Get:8 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [334 kB]
-Get:9 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [368 kB]    
-Get:10 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages [117 kB]                                                                                                                          
-Get:11 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB]                                                                                                                               
-Get:12 http://archive.ubuntu.com/ubuntu noble/multiverse amd64 Packages [331 kB]                                                                                                                          
-Get:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [438 kB]                                                                                                                        
-Get:14 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [309 kB]                                                                                                                  
-Get:15 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [430 kB]                                                                                                                    
-Get:16 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [16.9 kB]                                                                                                                 
-Get:17 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [11.5 kB]                                                                                                                 
-Fetched 24.4 MB in 9s (2664 kB/s)                                                                                                                                                                         
-Reading package lists... Done
-root@5a1089d3971e:/# 
+ankit@ankit:~$ docker container attach 5a<br>
+root@5a1089d3971e:/# apt-get update<br>
+Get:1 http://archive.ubuntu.com/ubuntu noble InRelease [256 kB]<br>
+Get:2 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]<br>
+Get:3 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [12.7 kB]<br>
+Get:4 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]<br>
+Get:5 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [309 kB]<br>
+Get:6 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]<br>
+Get:7 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB]<br>
+Get:8 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [334 kB]<br>
+Get:9 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [368 kB]   <br> 
+Get:10 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages [117 kB]  <br>                                                                                                                        
+Get:11 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB] <br>                                                                                                                              
+Get:12 http://archive.ubuntu.com/ubuntu noble/multiverse amd64 Packages [331 kB] <br>                                                                                                                         
+Get:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [438 kB] <br>                                                                                                                       
+Get:14 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [309 kB] <br>                                                                                                                 
+Get:15 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [430 kB]  <br>                                                                                                                  
+Get:16 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [16.9 kB] <br>                                                                                                                
+Get:17 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [11.5 kB] <br>                                                                                                                
+Fetched 24.4 MB in 9s (2664 kB/s)  <br>                                                                                                                                                                       
+Reading package lists... Done<br>
+root@5a1089d3971e:/# <br>
 
 #### Install  apache
 
@@ -555,27 +555,27 @@ Run this command in the terminal and Apache will install it into your container.
 apt-get install apache2
 ```
 #### Output:
-root@5a1089d3971e:/# apt-get install apache2
-Reading package lists... Done
-Building dependency tree... Done
-Reading state information... Done
-The following additional packages will be installed:
-..................
-.................
-Processing triggers for ca-certificates (20240203) ...
-Updating certificates in /etc/ssl/certs...
-0 added, 0 removed; done.
-Running hooks in /etc/ca-certificates/update.d...
-done.
-root@5a1089d3971e:/# 
+root@5a1089d3971e:/# apt-get install apache2<br>
+Reading package lists... Done<br>
+Building dependency tree... Done<br>
+Reading state information... Done<br>
+The following additional packages will be installed:<br>
+..................<br>
+.................<br>
+Processing triggers for ca-certificates (20240203) ...<br>
+Updating certificates in /etc/ssl/certs...<br>
+0 added, 0 removed; done.<br>
+Running hooks in /etc/ca-certificates/update.d...<br>
+done.<br>
+root@5a1089d3971e:/# <br>
 
 Now come inside the folder:
 ```
 cd /var/www/html/
 ```
 #### Output:
-root@5a1089d3971e:/# cd /var/www/html/
-root@5a1089d3971e:/var/www/html# 
+root@5a1089d3971e:/# cd /var/www/html/<br>
+root@5a1089d3971e:/var/www/html# <br>
 
 Add welcome to keen&able.
 ```
@@ -583,7 +583,7 @@ echo "Welcome to keen&able" >index.html
 ```
 #### Output:
 root@5a1089d3971e:/var/www/html# echo "Welcome to keen&able" >index.html
-root@5a1089d3971e:/var/www/html# 
+root@5a1089d3971e:/var/www/html# <br>
 #### Start the service
 Now, come outside from the folder
 ```
@@ -594,10 +594,10 @@ Run this command in the terminal to restart the Apache service.
 service apache2 start
 ```
 #### Output:
-root@5a1089d3971e:/var/www/html# cd
-root@5a1089d3971e:~# service apache2 start
- * Starting Apache httpd web server apache2                                                                                                                                                                 * 
-root@5a1089d3971e:~# 
+root@5a1089d3971e:/var/www/html# cd<br>
+root@5a1089d3971e:~# service apache2 start<br>
+ * Starting Apache httpd web server apache2 <br>                                                                                                                                                               * 
+root@5a1089d3971e:~# <br>
 #### Check the IP add
 Now, come outside from the container and press ctrl+p,ctrl+q
 Run this command in the terminal to check the container's IP. 
