@@ -789,9 +789,12 @@ e2798e258743   ubuntu    "/bin/bash"   21 minutes ago   Up 21 minutes   0.0.0.0:
 
 Run this command in the terminal to copy data from the system and paste it into the container's location.
 ```
-docker container cp filename id:/location
+docker container cp file path id:/location
 ```
 #### Output:
+ankit@ankit:~$ docker container cp /home/ankit/Downloads/docker.svg e2:/tmp
+Successfully copied 10.8kB to e2:/tmp
+
 # Docker image
 Docker images are used to create containers, which are instances of these images running in an isolated environment.
 
@@ -802,6 +805,10 @@ Run this command in the terminal to export the container data into a file.
 docker container export ID>file name
 ```
 #### Output:
+ankit@ankit:~$ docker container export e2>img1
+ankit@ankit:~$ ls
+Desktop  docimg  docker  Documents  Downloads  img1  Music  pdfstudioviewer2024  Pictures  Public  snap  Templates  Videos
+
 #### Create image
 
 Run this command in the terminal to import and make an image using the container's file.
@@ -809,13 +816,26 @@ Run this command in the terminal to import and make an image using the container
 docker image import filename image name
 ```
 #### Output:
-#### Create a container with an image
+ankit@ankit:~$ docker image import img1 image1
+sha256:134d0042461e3963371370388e78d8e2cf03197114a93163326d415bca35c1f0
+ankit@ankit:~$ docker image ls
+REPOSITORY        TAG       IMAGE ID       CREATED          SIZE
+image1            latest    134d0042461e   14 seconds ago   223MB
+ar2002-newimg     latest    4dfd2f22a976   9 days ago       223MB
+newimg            latest    4dfd2f22a976   9 days ago       223MB
+ar2002/webimage   latest    7631888c7972   9 days ago       223MB
+webimage          latest    7631888c7972   9 days ago       223MB
+mysql             latest    7ce93a845a8a   3 weeks ago      586MB
+ubuntu            latest    35a88802559d   2 months ago     78.1MB
 
+#### Create a container with an image
 Run this command in the terminal to create a container with an image.
 ```
 docker container run -it image name /bin/bash
 ```
 #### Output:
+ankit@ankit:~$ docker container run -it image1 /bin/bash
+root@7ec8f519ba68:/# 
 #### Create an image directly
 In the last two commands firstly we have to export the data in a file and then convert it to a docker image.
 Now, we can create images directly 
@@ -823,18 +843,28 @@ Now, we can create images directly
 docker container commit id image name
 ```
 #### Output:
+ankit@ankit:~$ docker container commit 7e img2
+sha256:9c29b70bec1c50b66e75edb7b8ffa4b40edc19038cb82582143c7e9536d25439
 #### To check
-
 Run this command in the terminal to  check the image list.
 ```
 docker image ls
 ```
 #### Output:
+ankit@ankit:~$ docker image ls
+REPOSITORY        TAG       IMAGE ID       CREATED              SIZE
+img2              latest    9c29b70bec1c   About a minute ago   223MB
+image1            latest    134d0042461e   23 minutes ago       223MB
+ar2002-newimg     latest    4dfd2f22a976   9 days ago           223MB
+newimg            latest    4dfd2f22a976   9 days ago           223MB
+ar2002/webimage   latest    7631888c7972   9 days ago           223MB
+webimage          latest    7631888c7972   9 days ago           223MB
+mysql             latest    7ce93a845a8a   3 weeks ago          586MB
+ubuntu            latest    35a88802559d   2 months ago         78.1MB
+ankit@ankit:~$ 
 # Docker hub
 Docker Hub is a container registry built for developers and open-source contributors to find, use, and share their container images.
 ![Docker-hub-registry(1)](https://github.com/user-attachments/assets/57b90ca6-9356-4fe0-a3b2-d4bbaf000bf8)
-
-
 - visit https://hub.docker.com/ 
 - create an account.
 ![Screenshot from 2024-08-13 15-48-33](https://github.com/user-attachments/assets/8ddcfe60-e8ed-4259-a24f-35ad4e805903)
@@ -848,7 +878,17 @@ There are the following steps to pull the image:
   for instance, if I want a MySQL image  then I search the MySQL and copy
   ```
   docker pull mysql
-  ``` 
+  ```
+  #### Output:
+  ankit@ankit:~$ docker pull mysql
+Using default tag: latest
+latest: Pulling from library/mysql
+Digest: sha256:d8df069848906979fd7511db00dc22efeb0a33a990d87c3c6d3fcdafd6fc6123
+Status: Image is up to date for mysql:latest
+docker.io/library/mysql:latest
+ankit@ankit:~$ 
+
+
 ## Push image
 There are the following steps to push the image: 
 - Create a docker tag.
@@ -864,6 +904,7 @@ Run this command in the terminal to tag the image.
 docker tag image name username/any name
 ```
 #### Output:
+ankit@ankit:~$ docker tag img2  ar2002/img22
 ### Login via CLI into the docker hub account
 
 Run this command into the terminal to log in via CLI to the docker hub account.
@@ -872,32 +913,53 @@ docker login
 ```
 #### Output:
 ![Screenshot from 2024-08-13 15-50-26](https://github.com/user-attachments/assets/97c62162-0ab7-4d68-aeac-a8942dddb178)
+ankit@ankit:~$ docker login
+Log in with your Docker ID or email address to push and pull images from Docker Hub. If you don't have a Docker ID, head over to https://hub.docker.com/ to create one.
+You can log in with your password or a Personal Access Token (PAT). Using a limited-scope PAT grants better security and is required for organizations using SSO. Learn more at https://docs.docker.com/go/access-tokens/
+
+Username: ar2002
+Password: 
+WARNING! Your password will be stored unencrypted in /home/ankit/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credential-stores
 
 ### Push the image
 
 Run this command in the terminal to push the image on the docker hub.
 ```
-docker push imagename/ar2002/webimage
+docker push username/imagename
 ```
 #### Output:
+ankit@ankit:~$ docker push ar2002/img22
+Using default tag: latest
+The push refers to repository [docker.io/ar2002/img22]
+de4b1ac8264a: Pushed 
+latest: digest: sha256:a96bba9408d9b09e809d9bddecad830a3588be0b6c75b35f6ad1e85e1c0d4d90 size: 529
+ankit@ankit:~$ 
+
 Now, your image will be available on the docker hub all over the world.
 
 # Docker volume
 A Docker volume is a storage, that is attached to a container and stores all the data of the container if case a container is stopped or crashes then we can use this volume.
-### Check volume
-
-Run this command in the terminal to check volume.
-```
-docker volume ls
-```
-#### Output:
 ### For help
-
 Run this command in the terminal for image-related help.
 ```
 docker volume --help
 ```
 #### Output:
+ankit@ankit:~$ docker volume --help
+Usage:  docker volume COMMAND
+Manage volumes
+
+Commands:
+  create      Create a volume
+  inspect     Display detailed information on one or more volumes
+  ls          List volumes
+  prune       Remove unused local volumes
+  rm          Remove one or more volumes
+
+Run 'docker volume COMMAND --help' for more information on a command.
+
  ### Create volume
 
 Run this command in the terminal to create volume.
@@ -905,13 +967,39 @@ Run this command in the terminal to create volume.
 docker volume create volume name
 ```
 #### Output:
-### Check path
+ankit@ankit:~$ docker volume create vol1
+vol1
+### Check volume
+
+Run this command in the terminal to check volume.
+```
+docker volume ls
+```
+#### Output:
+ankit@ankit:~$ docker volume ls
+DRIVER    VOLUME NAME
+local     myvol
+local     vol1
+
+### Check volume info
 
 Run this command in the terminal to check the path of volume.
 ```
 docker volume inspect volume name
 ```
 #### Output:
+ankit@ankit:~$ docker volume inspect vol1
+[
+    {
+        "CreatedAt": "2024-08-17T12:52:04+05:30",
+        "Driver": "local",
+        "Labels": null,
+       "Mountpoint": "/var/lib/docker/volumes/vol1/_data",
+        "Name": "vol1",
+        "Options": null,
+        "Scope": "local"
+    }
+]
 ### Copy the path and paste it into the terminal 
 
 Run this command in the terminal to come inside the volume.
@@ -919,6 +1007,11 @@ Run this command in the terminal to come inside the volume.
 cd /var/lib/docker/volumes/myvol/_data
 ```
 #### Output:
+ankit@ankit:~$ su
+Password: 
+root@ankit:/home/ankit# cd
+root@ankit:~# cd /var/lib/docker/volumes/vol1/_data
+root@ankit:/var/lib/docker/volumes/vol1/_data#
 ### Create some file
 
 Run this command in the terminal to create some files inside the terminal.
@@ -926,6 +1019,10 @@ Run this command in the terminal to create some files inside the terminal.
 touch abc{1..10}
 ```
 #### Output:
+root@ankit:/var/lib/docker/volumes/vol1/_data# touch abc{1..10}
+root@ankit:/var/lib/docker/volumes/vol1/_data# ls
+abc1  abc10  abc2  abc3  abc4  abc5  abc6  abc7  abc8  abc9
+root@ankit:/var/lib/docker/volumes/vol1/_data#
 ### Create a container with an attached volume
 
 Run this command in the terminal to create  the container with the attached volume.
@@ -934,13 +1031,24 @@ docker container run -it -v vol name:/tmp --name xyz ubuntu /bin/bash
 ```
 - -v stands for volume
 - #### Output:
+root@ankit:~# docker container run -it -v vol1:/tmp --name cont1 ubuntu /bin/bash
+root@402ceb2b8ea5:/# root@ankit:~# docker container ls
+CONTAINER ID   IMAGE     COMMAND       CREATED          STATUS          PORTS                                   NAMES
+402ceb2b8ea5   ubuntu    "/bin/bash"   26 seconds ago   Up 24 seconds                                           cont1
+7ec8f519ba68   image1    "/bin/bash"   4 hours ago      Up 4 hours                                              nifty_murdock
+e2798e258743   ubuntu    "/bin/bash"   23 hours ago     Up 6 hours      0.0.0.0:3600->80/tcp, :::3600->80/tcp   mycont1
+root@ankit:~# 
 ### Check whether volume data is available or not
 
 Run this command in the terminal to check the volume data that we have attached. 
 ```
-cd /mnt/
+cd /tmp
 ```
 #### Output:
+root@402ceb2b8ea5:~# cd /tmp 
+root@402ceb2b8ea5:/tmp# ls
+abc1  abc10  abc2  abc3  abc4  abc5  abc6  abc7  abc8  abc9
+root@402ceb2b8ea5:/tmp# 
 # Docker swarm
 Docker Swarm is a tool that allows you to manage workers as an individual manager.
 Managers can manage containers, images, and volume at the worker's node.
