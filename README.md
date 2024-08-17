@@ -52,11 +52,11 @@ Docker makes setting up applications straightforward. You don’t need to instal
 - lsb_release: Stands for "Linux Standard Base release." It is a command-line tool that provides information about the Linux distribution's release.
 - -a: This option stands for "all." It instructs the command to display all available information.
 #### Output:
-No LSB modules are available.
-Distributor ID:	Ubuntu
-Description:	Ubuntu 20.04.6 LTS
-Release:	20.04
-Codename:	focal
+No LSB modules are available.<br>
+Distributor ID:	Ubuntu<br>
+Description:	Ubuntu 20.04.6 LTS<br>
+Release:	20.04<br>
+Codename:	focal<br>
 ### RAM 
 At least we have 2 GB of RAM in our system to run docker.
 #### How to check the RAM?
@@ -65,14 +65,13 @@ Run this command in the terminal  to check the RAM.
  ```
  free -h
 ```
-- free: This command displays the total amount of free and used physical memory (RAM) and swap memory in the system, as well as the buffers and caches used by the kernel.
-
-- -h: This option stands for "human-readable." It modifies the output to be in a format that is easier to read, typically using units like KB, MB, or GB instead of displaying the memory in bytes.
+- free: This command displays the total amount of free and used physical memory (RAM) and swap memory in the system, as well as the buffers and caches used by the kernel.<br>
+- -h: This option stands for "human-readable." It modifies the output to be in a format that is easier to read, typically using units like KB, MB, or GB instead of displaying the memory in bytes.<br>
 #### Output:
-ankit@ankit:~$ free -h
-              total        used        free      shared  buff/cache   available
-Mem:          7.5Gi       2.5Gi       3.2Gi       463Mi       1.9Gi       4.3Gi
-Swap:         2.0Gi          0B       2.0Gi
+ankit@ankit:~$ free -h<br>
+              total        used        free      shared  buff/cache   available<br>
+Mem:          7.5Gi       2.5Gi       3.2Gi       463Mi       1.9Gi       4.3Gi<br>
+Swap:         2.0Gi          0B       2.0Gi<br>
 
 #### Step 1. Update system by using the following command :
 
@@ -87,40 +86,40 @@ Run this command in the terminal to update your system.
 - update: This subcommand tells apt-get to download the latest package lists from the repositories specified in your system's configuration files (typically found in /etc/apt/sources.list)
 #### Output:
 
-ankit@ankit:~$ sudo apt-get update
-[sudo] password for ankit: 
-Get:1 https://download.docker.com/linux/ubuntu focal InRelease [57.7 kB]                                                                                                                                  
-Get:2 https://packages.microsoft.com/repos/code stable InRelease [3,590 B]                                                                                                                                
-Hit:3 http://in.archive.ubuntu.com/ubuntu focal InRelease                                                                         
-Err:1 https://download.docker.com/linux/ubuntu focal InRelease             
-  The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 7EA0A9C3F273FCD8
-Get:4 http://in.archive.ubuntu.com/ubuntu focal-updates InRelease [128 kB]
-Get:5 https://packages.microsoft.com/repos/code stable/main arm64 Packages [17.9 kB]
-Get:6 http://security.ubuntu.com/ubuntu focal-security InRelease [128 kB]                 
-Get:7 https://packages.microsoft.com/repos/code stable/main amd64 Packages [17.8 kB]
-Get:8 https://packages.microsoft.com/repos/code stable/main armhf Packages [18.0 kB]                             
-Hit:9 http://in.archive.ubuntu.com/ubuntu focal-backports InRelease                                                          
-Get:10 http://in.archive.ubuntu.com/ubuntu focal-updates/main i386 Packages [1,017 kB]
-Get:11 http://in.archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [3,496 kB]
-Get:12 http://security.ubuntu.com/ubuntu focal-security/main i386 Packages [797 kB]
-Get:13 http://in.archive.ubuntu.com/ubuntu focal-updates/main Translation-en [543 kB]
-Get:14 http://in.archive.ubuntu.com/ubuntu focal-updates/main amd64 c-n-f Metadata [17.7 kB]    
-Get:15 http://in.archive.ubuntu.com/ubuntu focal-updates/universe i386 Packages [801 kB]           
-Get:16 http://in.archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [1,219 kB]
-Get:17 http://in.archive.ubuntu.com/ubuntu focal-updates/universe Translation-en [294 kB]   
-Get:18 http://in.archive.ubuntu.com/ubuntu focal-updates/universe amd64 c-n-f Metadata [27.8 kB]
-Get:19 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [3,126 kB]            
-Get:20 http://security.ubuntu.com/ubuntu focal-security/main Translation-en [464 kB]
-Get:21 http://security.ubuntu.com/ubuntu focal-security/main amd64 c-n-f Metadata [14.2 kB]
-Get:22 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [999 kB]
-Get:23 http://security.ubuntu.com/ubuntu focal-security/universe i386 Packages [674 kB]
-Get:24 http://security.ubuntu.com/ubuntu focal-security/universe Translation-en [212 kB]
-Get:25 http://security.ubuntu.com/ubuntu focal-security/universe amd64 c-n-f Metadata [21.0 kB]
-Fetched 14.1 MB in 6s (2,288 kB/s)                                                                                                                                                                        
-Reading package lists... Done
-W: An error occurred during the signature verification. The repository is not updated and the previous index files will be used. GPG error: https://download.docker.com/linux/ubuntu focal InRelease: The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 7EA0A9C3F273FCD8
-W: Failed to fetch https://download.docker.com/linux/ubuntu/dists/focal/InRelease  The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 7EA0A9C3F273FCD8
-W: Some index files failed to download. They have been ignored, or old ones used instead
+ankit@ankit:~$ sudo apt-get update<br>
+[sudo] password for ankit: <br>
+Get:1 https://download.docker.com/linux/ubuntu focal InRelease [57.7 kB]<br>                                                                                                                                  
+Get:2 https://packages.microsoft.com/repos/code stable InRelease [3,590 B]  <br>                                                                                                                              
+Hit:3 http://in.archive.ubuntu.com/ubuntu focal InRelease<br>                                                                         
+Err:1 https://download.docker.com/linux/ubuntu focal InRelease<br>             
+  The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 7EA0A9C3F273FCD8<br>
+Get:4 http://in.archive.ubuntu.com/ubuntu focal-updates InRelease [128 kB]<br>
+Get:5 https://packages.microsoft.com/repos/code stable/main arm64 Packages [17.9 kB]<br>
+Get:6 http://security.ubuntu.com/ubuntu focal-security InRelease [128 kB]<br>                 
+Get:7 https://packages.microsoft.com/repos/code stable/main amd64 Packages [17.8 kB]<br>
+Get:8 https://packages.microsoft.com/repos/code stable/main armhf Packages [18.0 kB]<br>                             
+Hit:9 http://in.archive.ubuntu.com/ubuntu focal-backports InRelease.<br>                                                          
+Get:10 http://in.archive.ubuntu.com/ubuntu focal-updates/main i386 Packages [1,017 kB]<br>
+Get:11 http://in.archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [3,496 kB]<br>
+Get:12 http://security.ubuntu.com/ubuntu focal-security/main i386 Packages [797 kB]<br>
+Get:13 http://in.archive.ubuntu.com/ubuntu focal-updates/main Translation-en [543 kB]<br>
+Get:14 http://in.archive.ubuntu.com/ubuntu focal-updates/main amd64 c-n-f Metadata [17.7 kB]<br>    
+Get:15 http://in.archive.ubuntu.com/ubuntu focal-updates/universe i386 Packages [801 kB]<br>           
+Get:16 http://in.archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [1,219 kB]<br>
+Get:17 http://in.archive.ubuntu.com/ubuntu focal-updates/universe Translation-en [294 kB]<br>   
+Get:18 http://in.archive.ubuntu.com/ubuntu focal-updates/universe amd64 c-n-f Metadata [27.8 kB]<br>
+Get:19 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [3,126 kB]<br>         
+Get:20 http://security.ubuntu.com/ubuntu focal-security/main Translation-en [464 kB]<br>
+Get:21 http://security.ubuntu.com/ubuntu focal-security/main amd64 c-n-f Metadata [14.2 kB]<br>
+Get:22 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [999 kB]<br>
+Get:23 http://security.ubuntu.com/ubuntu focal-security/universe i386 Packages [674 kB]<br>
+Get:24 http://security.ubuntu.com/ubuntu focal-security/universe Translation-en [212 kB]<br>
+Get:25 http://security.ubuntu.com/ubuntu focal-security/universe amd64 c-n-f Metadata [21.0 kB]<br>
+Fetched 14.1 MB in 6s (2,288 kB/s)<br>                                                                                                                                                                        
+Reading package lists... Done<br>
+W: An error occurred during the signature verification. The repository is not updated and the previous index files will be used. GPG error: https://download.docker.com/linux/ubuntu focal InRelease: The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 7EA0A9C3F273FCD8<br>
+W: Failed to fetch https://download.docker.com/linux/ubuntu/dists/focal/InRelease  The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 7EA0A9C3F273FCD8<br>
+W: Some index files failed to download. They have been ignored, or old ones used instead<br>
 
 #### Step2: Sometimes the curl package is not installed in the system, To install curl use this command: 
 ```
