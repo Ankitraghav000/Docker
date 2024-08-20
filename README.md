@@ -1058,11 +1058,15 @@ Run this command in the terminal to come inside the volume.
 cd /var/lib/docker/volumes/myvol/_data
 ```
 #### Output:
-ankit@ankit:~$ su<br>
+ankit@ankit:~$ su
+
 Password: <br>
-root@ankit:/home/ankit# cd<br>
-root@ankit:~# cd /var/lib/docker/volumes/vol1/_data<br>
-root@ankit:/var/lib/docker/volumes/vol1/_data#<br>
+root@ankit:/home/ankit# cd
+
+root@ankit:~# cd /var/lib/docker/volumes/vol1/_data
+
+root@ankit:/var/lib/docker/volumes/vol1/_data#
+
 ### Create some file
 
 Run this command in the terminal to create some files inside the terminal.
@@ -1070,8 +1074,10 @@ Run this command in the terminal to create some files inside the terminal.
 touch abc{1..10}
 ```
 #### Output:
-root@ankit:/var/lib/docker/volumes/vol1/_data# touch abc{1..10}<br>
-root@ankit:/var/lib/docker/volumes/vol1/_data# ls<br>
+root@ankit:/var/lib/docker/volumes/vol1/_data# touch abc{1..10}
+
+root@ankit:/var/lib/docker/volumes/vol1/_data# ls
+
 abc1  abc10  abc2  abc3  abc4  abc5  abc6  abc7  abc8  abc9<br>
 root@ankit:/var/lib/docker/volumes/vol1/_data#<br>
 ### Create a container with an attached volume
@@ -1096,8 +1102,10 @@ Run this command in the terminal to check the volume data that we have attached.
 cd /tmp
 ```
 #### Output:
-root@402ceb2b8ea5:~# cd /tmp<br> 
-root@402ceb2b8ea5:/tmp# ls<br>
+root@402ceb2b8ea5:~# cd /tmp
+
+root@402ceb2b8ea5:/tmp# ls
+
 abc1  abc10  abc2  abc3  abc4  abc5  abc6  abc7  abc8  abc9<br>
 root@402ceb2b8ea5:/tmp# <br>
 # Docker swarm
