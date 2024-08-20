@@ -666,9 +666,11 @@ Run this command in the terminal to check the Apache server output on the termin
 curl IP
 ```
 #### Output:<br>
-ankit@ankit:~$ curl 172.17.0.2<br>
+ankit@ankit:~$ curl 172.17.0.2
+
 Welcome to keen&able<br>
-ankit@ankit:~$ <br>
+ankit@ankit:~$ 
+
 #### Check how much space the container has used
 
 Run this command in the terminal with the container ID to check the space used by the container.
@@ -778,8 +780,10 @@ Run this command in the terminal to change the container name.
 docker container rename id new name
 ```
 #### Output:
-ankit@ankit:~$ docker container rename e2  mycont1<br>
-ankit@ankit:~$ docker container ls<br>
+ankit@ankit:~$ docker container rename e2  mycont1
+
+ankit@ankit:~$ docker container ls
+
 CONTAINER ID   IMAGE     COMMAND       CREATED          STATUS          PORTS                                   NAMES<br>
 e2798e258743   ubuntu    "/bin/bash"   19 minutes ago   Up 19 minutes   0.0.0.0:3600->80/tcp, :::3600->80/tcp   mycont1<br>
 5a1089d3971e   ubuntu    "/bin/bash"   3 hours ago      Up 3 hours                                              magical_williamson<br>
