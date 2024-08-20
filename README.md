@@ -248,8 +248,8 @@ docker-ce: Specifies the package name for Docker Community Edition, which is the
 
 -y: Automatically answers "yes" to any prompts that may appear during the installation process.<br>
 #### Output:
-ankit@ankit:~$ sudo apt install docker-ce -y<br>
-Reading package lists... Done<br>
+ankit@ankit:~$ sudo apt install docker-ce -y <br>
+Reading package lists... Done <br>
 Building dependency tree    <br>   
 Reading state information... Done<br>
 The following packages were automatically installed and are no longer required:<br>
