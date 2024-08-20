@@ -441,13 +441,16 @@ e6bf00e259ee<br>
 ankit@ankit:~$ docker container stop 03
 
 03<br>
-ankit@ankit:~$ docker container stop 3<br>
-3<br>
-ankit@ankit:~$ docker container stop myvol<br>
-Error response from daemon: No such container: myvol<br>
-ankit@ankit:~$ docker container stop myvolcontainer1<br>
+ankit@ankit:~$ docker container stop 3
+
+3
+ankit@ankit:~$ docker container stop myvol
+
+Error response from daemon: No such container: myvol
+ankit@ankit:~$ docker container stop myvolcontainer1
+
 myvolcontainer1<br>
-ankit@ankit:~$ <br>
+ankit@ankit:~$
 
 #### Start the container
 
@@ -456,9 +459,11 @@ Run this command in the terminal with your container ID and it will start.
 docker container start container id
 ```
 #### Output:
-ankit@ankit:~$ docker container start 57<br>
-57<br>
-ankit@ankit:~$ docker container start e6<br>
+ankit@ankit:~$ docker container start 57
+
+57
+ankit@ankit:~$ docker container start e6
+
 e6<br>
 
 #### Restart the container
@@ -468,9 +473,11 @@ Run this command in the terminal with your container ID and the running containe
 docker container restart container id
 ```
 #### Output:
-ankit@ankit:~$ docker container start e6<br>
+ankit@ankit:~$ docker container start e6
+
 e6<br>
-ankit@ankit:~$ docker container restart e6<br>
+ankit@ankit:~$ docker container restart e6
+
 e6<br>
 #### Delete a stopped container
 
@@ -479,21 +486,26 @@ Run this command in the terminal with your container ID and it will deleted or r
 docker container rm container id
 ```
 #### Output:
-ankit@ankit:~$ docker container rm 03<br>
+ankit@ankit:~$ docker container rm 03
+
 03<br>
-ankit@ankit:~$ <br>
+ankit@ankit:~$ 
+
 #### Delete a running container
 Run this command in the terminal with your container ID and your running container will be deleted forcefully (-f).
 ```
 docker container rm container id -f
 ```
 #### Output:
-ankit@ankit:~$ docker container rm container 3f -f<br>
-Error response from daemon: No such container: container<br>
+ankit@ankit:~$ docker container rm container 3f -f
+
+Error response from daemon: No such container: container
+
 3f<br>
-ankit@ankit:~$ docker container ls -a<br>
+ankit@ankit:~$ docker container ls -a
+
 CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES<br>
-ankit@ankit:~$ <br>
+ankit@ankit:~$
 
 # Apache server 
 Apache is a web server tool that accepts visitors' HTTP requests and sends them back the requested information in the form of web pages.
@@ -506,6 +518,7 @@ docker container run -it ubuntu /bin/bash
 ```
 #### Output:
 ankit@ankit:~$ docker container run -it ubuntu /bin/bash<br>
+
 root@5a1089d3971e:/# <br>
 #### Exit from the container
 
@@ -517,8 +530,9 @@ ctrl+p
 ctrl+q
 ```
 #### Output:
-ankit@ankit:~$ docker container run -it ubuntu /bin/bash<br>
-root@5a1089d3971e:/# ankit@ankit:~$ <br>
+ankit@ankit:~$ docker container run -it ubuntu /bin/bash
+
+root@5a1089d3971e:/# ankit@ankit:~$
 
 #### Come inside the container
 
