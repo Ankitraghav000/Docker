@@ -127,8 +127,9 @@ W: Some index files failed to download. They have been ignored, or old ones used
 ```
 curl: This is the name of the package you want to install. curl is a command-line tool used to transfer data from a server. It supports various protocols, including HTTP, HTTPS, and FTP.
 #### Output:
-ankit@ankit:~$ sudo apt-get install curl<br>
-Reading package lists... Done<br>
+ankit@ankit:~$ sudo apt-get install curl
+
+Reading package lists... Done
 Building dependency tree<br>       
 Reading state information... Done<br>
 curl is already the newest version (7.68.0-1ubuntu2.23).<br>
