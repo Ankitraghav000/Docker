@@ -252,10 +252,10 @@ ankit@ankit:~$ sudo apt install docker-ce -y
 
 Reading package lists... Done
 
-Building dependency tree     
-Reading state information... Done
-The following packages were automatically installed and are no longer required:
-  bridge-utils gir1.2-goa-1.0 ubuntu-fan
+Building dependency tree  <br>   
+Reading state information... Done<br>
+The following packages were automatically installed and are no longer required:<br>
+  bridge-utils gir1.2-goa-1.0 ubuntu-fan<br>
 Use 'sudo apt autoremove' to remove them.
 Suggested packages:
   aufs-tools cgroupfs-mount | cgroup-lite
