@@ -809,7 +809,8 @@ docker container unpause id/name
 #### Output:
 ankit@ankit:~$ docker container unpause e2
 
-e2<br>
+e2
+
 ankit@ankit:~$ docker container ls
 
 CONTAINER ID   IMAGE     COMMAND       CREATED          STATUS          PORTS                                   NAMES<br>
