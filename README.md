@@ -795,10 +795,12 @@ Run this command in the terminal to pause the container.
 docker container pause id/name
 ```
 #### Output:
-ankit@ankit:~$ docker container ls<br>
+ankit@ankit:~$ docker container ls
+
 CONTAINER ID   IMAGE     COMMAND       CREATED          STATUS                   PORTS                                   NAMES<br>
 e2798e258743   ubuntu    "/bin/bash"   20 minutes ago   Up 20 minutes (Paused)   0.0.0.0:3600->80/tcp, :::3600->80/tcp   mycont1<br>
-5a1089d3971e   ubuntu    "/bin/bash"   3 hours ago      Up 3 hours                                                       magical_williamson<br>
+5a1089d3971e   ubuntu    "/bin/bash"   3 hours ago      Up 3 hours                                                       magical_williamson
+
 ankit@ankit:~$ <br>
 
 ## Unpause the container
