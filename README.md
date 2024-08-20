@@ -427,15 +427,19 @@ Run this command in the terminal with your container ID and it will stop.
 docker container stop container id
 ```
 #### Output:
-ankit@ankit:~$ docker container ls -a<br>
+ankit@ankit:~$ docker container ls -a
+
 CONTAINER ID   IMAGE     COMMAND       CREATED         STATUS                        PORTS     NAMES<br>
 e6bf00e259ee   ubuntu    "/bin/bash"   5 minutes ago   Exited (137) 22 seconds ago             lucid_neumann<br>
 03fb03684da8   ubuntu    "sleep 60"    5 minutes ago   Exited (0) 4 minutes ago                agitated_jang<br>
 3f4680f900ae   ubuntu    "/bin/bash"   7 minutes ago   Exited (0) 7 minutes ago                trusting_bartik<br>
-57eb84a45887   ubuntu    "/bin/bash"   8 days ago      Exited (137) 8 days ago                 myvolcontainer1<br>
-ankit@ankit:~$ docker container stop e6bf00e259ee<br>
+57eb84a45887   ubuntu    "/bin/bash"   8 days ago      Exited (137) 8 days ago                 myvolcontainer1<be>
+
+ankit@ankit:~$ docker container stop e6bf00e259ee
+
 e6bf00e259ee<br>
-ankit@ankit:~$ docker container stop 03<br>
+ankit@ankit:~$ docker container stop 03
+
 03<br>
 ankit@ankit:~$ docker container stop 3<br>
 3<br>
