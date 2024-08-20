@@ -383,6 +383,7 @@ docker container run ubuntu
 ```
 #### Output:
 ankit@ankit:~$ docker container run ubuntu
+
 ankit@ankit:~$
 
 #### Run container in the background only for 60 sec
