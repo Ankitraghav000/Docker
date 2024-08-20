@@ -255,22 +255,22 @@ Reading package lists... Done
 Building dependency tree  <br>   
 Reading state information... Done<br>
 The following packages were automatically installed and are no longer required:<br>
-  bridge-utils gir1.2-goa-1.0 ubuntu-fan<br>
-Use 'sudo apt autoremove' to remove them.
-Suggested packages:
-  aufs-tools cgroupfs-mount | cgroup-lite
-The following packages will be upgraded:
-  docker-ce
-1 upgraded, 0 newly installed, 0 to remove and 42 not upgraded.
-Need to get 25.3 MB of archives.
-After this operation, 9,216 B of additional disk space will be used.
-Get:1 https://download.docker.com/linux/ubuntu focal/stable amd64 docker-ce amd64 5:27.1.2-1~ubuntu.20.04~focal [25.3 MB]
-Fetched 25.3 MB in 8s (3,120 kB/s)                                                                                                                                                                        
-(Reading database ... 185972 files and directories currently installed.)
-Preparing to unpack .../docker-ce_5%3a27.1.2-1~ubuntu.20.04~focal_amd64.deb ...
-Unpacking docker-ce (5:27.1.2-1~ubuntu.20.04~focal) over (5:27.1.1-1~ubuntu.20.04~focal) ...
-Setting up docker-ce (5:27.1.2-1~ubuntu.20.04~focal) ...
-Processing triggers for systemd (245.4-4ubuntu3.23) ...
+  bridge-utils gir1.2-goa-1.0 ubuntu-fan <br>
+Use 'sudo apt autoremove' to remove them. <br>
+Suggested packages: <br>
+  aufs-tools cgroupfs-mount | cgroup-lite <br>
+The following packages will be upgraded: <br>
+  docker-ce <br>
+1 upgraded, 0 newly installed, 0 to remove and 42 not upgraded. <br>
+Need to get 25.3 MB of archives. <br>
+After this operation, 9,216 B of additional disk space will be used. <br>
+Get:1 https://download.docker.com/linux/ubuntu focal/stable amd64 docker-ce amd64 5:27.1.2-1~ubuntu.20.04~focal [25.3 MB] <br>
+Fetched 25.3 MB in 8s (3,120 kB/s)   <br>                                                                                                                                                                      
+(Reading database ... 185972 files and directories currently installed.) <br>
+Preparing to unpack .../docker-ce_5%3a27.1.2-1~ubuntu.20.04~focal_amd64.deb ... <br>
+Unpacking docker-ce (5:27.1.2-1~ubuntu.20.04~focal) over (5:27.1.1-1~ubuntu.20.04~focal) ... <br>
+Setting up docker-ce (5:27.1.2-1~ubuntu.20.04~focal) ... <br>
+Processing triggers for systemd (245.4-4ubuntu3.23) ... <br>
 
 Once you have installed the Docker daemon or service, it should be running. To confirm this, run the command:
 ```
