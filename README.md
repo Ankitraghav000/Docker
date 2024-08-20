@@ -201,8 +201,11 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o 
 - /usr/share/keyrings/: A directory commonly used to store keyrings for authentication.<br>
 - docker-archive-keyring.gpg**: The name of the file where the Docker GPG key is saved in binary format<br>
  #### Output:
- ankit@ankit:~$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg<br>
-ankit@ankit:~$ <br>
+ 
+ ankit@ankit:~$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+ 
+ankit@ankit:~$ 
+
 Add the Docker APT repository to your system in the sources.list.d directory.<br>
 ```
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
