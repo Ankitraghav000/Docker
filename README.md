@@ -1088,13 +1088,16 @@ docker container run -it -v vol name:/tmp --name xyz ubuntu /bin/bash
 ```
 - -v stands for volume
 - #### Output:
-root@ankit:~# docker container run -it -v vol1:/tmp --name cont1 ubuntu /bin/bash<br>
-root@402ceb2b8ea5:/# root@ankit:~# docker container ls<br>
+root@ankit:~# docker container run -it -v vol1:/tmp --name cont1 ubuntu /bin/bash
+
+root@402ceb2b8ea5:/# root@ankit:~# docker container ls
+
 CONTAINER ID   IMAGE     COMMAND       CREATED          STATUS          PORTS                                   NAMES<br>
 402ceb2b8ea5   ubuntu    "/bin/bash"   26 seconds ago   Up 24 seconds                                           cont1<br>
 7ec8f519ba68   image1    "/bin/bash"   4 hours ago      Up 4 hours                                              nifty_murdock<br>
 e2798e258743   ubuntu    "/bin/bash"   23 hours ago     Up 6 hours      0.0.0.0:3600->80/tcp, :::3600->80/tcp   mycont1<br>
-root@ankit:~# <br>
+root@ankit:~# 
+
 ### Check whether volume data is available or not
 
 Run this command in the terminal to check the volume data that we have attached. 
